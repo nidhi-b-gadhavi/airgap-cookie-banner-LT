@@ -1,0 +1,83 @@
+{
+  "scenario": "airgap-authenticated-cookie-banner",
+  "baseUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com",
+  "concurrency": 1,
+  "iterationsPerUser": 1,
+  "execution": {
+    "batchSize": 20,
+    "batchDelayMs": 2000,
+    "headless": false,
+    "contextMode": "isolated"
+  },
+  "authStatePath": "C:\\Users\\L135061\\codebase\\LDPCE\\test-cases\\load-test-cases-separated\\playwright-load\\auth-state-ms.json",
+  "cookieAction": "content_check",
+  "totals": {
+    "requests": 1,
+    "successCount": 1,
+    "failureCount": 0,
+    "errorRatePct": 0,
+    "totalDurationMs": 5610,
+    "throughputRps": 0.18
+  },
+  "latencyMs": {
+    "endToEnd": {
+      "count": 1,
+      "minMs": 3051,
+      "p50Ms": 3051,
+      "p95Ms": 3051,
+      "p99Ms": 3051,
+      "maxMs": 3051,
+      "avgMs": 3051
+    },
+    "initialNavigation": {
+      "count": 1,
+      "minMs": 395,
+      "p50Ms": 395,
+      "p95Ms": 395,
+      "p99Ms": 395,
+      "maxMs": 395,
+      "avgMs": 395
+    },
+    "cookieAction": {
+      "count": 1,
+      "minMs": 1628,
+      "p50Ms": 1628,
+      "p95Ms": 1628,
+      "p99Ms": 1628,
+      "maxMs": 1628,
+      "avgMs": 1628
+    },
+    "finalPageLoad": {
+      "count": 0,
+      "minMs": 0,
+      "p50Ms": 0,
+      "p95Ms": 0,
+      "p99Ms": 0,
+      "maxMs": 0,
+      "avgMs": 0
+    }
+  },
+  "cookieBanner": {
+    "attempted": 1,
+    "success": 1,
+    "successRatePct": 100
+  },
+  "sampleFailures": [],
+  "passCriteria": {
+    "passed": true,
+    "checks": [
+      {
+        "name": "cookie_content_success_rate",
+        "expected": ">= 100",
+        "actual": 100,
+        "passed": true
+      },
+      {
+        "name": "max_error_rate_pct",
+        "expected": "<= 10",
+        "actual": 0,
+        "passed": true
+      }
+    ]
+  }
+}

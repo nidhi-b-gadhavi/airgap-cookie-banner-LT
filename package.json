@@ -1,0 +1,34 @@
+{
+  "name": "load-test-cases-separated",
+  "version": "1.0.0",
+  "description": "This folder contains a practical starter kit for:\r - Performance test environment setup\r - Load test case definitions\r - Performance test case definitions\r - Playwright executable test cases\r - Execution and reporting workflow",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "auth:bootstrap": "node .\\playwright-load\\auth-bootstrap-ms.js",
+    "lt:01": "node .\\playwright-load\\run-lt-case.js",
+    "lt:02": "set CASE_ID=LT-02&& node .\\playwright-load\\run-lt-case.js",
+    "lt:03": "set CASE_ID=LT-03&& node .\\playwright-load\\run-lt-case.js",
+    "lt:baseline": "set COOKIE_ACTION=script_loaded&& set AIRGAP_SCRIPT_MATCH=airgap.js&& set CONCURRENCY=1&& set ITERATIONS=1&& set HEADLESS=false&& set CONTEXT_MODE=shared&& set PREFLIGHT_ENABLED=true&& set PREFLIGHT_STRICT=true&& node .\\playwright-load\\airgap.js",
+    "airgap:script-loaded:1": "set COOKIE_ACTION=script_loaded&& set AIRGAP_SCRIPT_MATCH=airgap.js&& set CONCURRENCY=1&& set ITERATIONS=1&& set HEADLESS=false&& set CONTEXT_MODE=shared&& set PREFLIGHT_ENABLED=true&& set PREFLIGHT_STRICT=true&& node .\\playwright-load\\airgap.js",
+    "lt:baseline:write": "set COOKIE_ACTION=accept&& node .\\playwright-load\\consent-write-baseline.js",
+    "lt:baseline:write:accept": "set COOKIE_ACTION=accept&& node .\\playwright-load\\consent-write-baseline.js",
+    "lt:baseline:write:reject": "set COOKIE_ACTION=reject&& node .\\playwright-load\\consent-write-baseline.js",
+    "lt:baseline:write:more": "set COOKIE_ACTION=more&& node .\\playwright-load\\consent-write-baseline.js",
+    "consent:capture": "node .\\playwright-load\\capture-consent-events.js",
+    "report:table": "node .\\playwright-load\\render-test-report.js",
+    "airgap:100": "set CONCURRENCY=100&& node .\\playwright-load\\airgap.js",
+    "airgap:500": "set CONCURRENCY=500&& node .\\playwright-load\\airgap.js",
+    "airgap:20": "set COOKIE_ACTION=script_loaded&& set AIRGAP_SCRIPT_MATCH=airgap.js&& set CONCURRENCY=20&& set ITERATIONS=1&& set HEADLESS=true&& set CONTEXT_MODE=shared&& set PREFLIGHT_ENABLED=true&& set PREFLIGHT_STRICT=true&& node .\\playwright-load\\airgap.js",
+    "airgap:20:stable": "set COOKIE_ACTION=script_loaded&& set AIRGAP_SCRIPT_MATCH=airgap.js&& set CONCURRENCY=20&& set ITERATIONS=1&& set HEADLESS=true&& set CONTEXT_MODE=shared&& set BATCH_SIZE=2&& set BATCH_DELAY_MS=1200&& set PREFLIGHT_ENABLED=true&& set PREFLIGHT_STRICT=true&& node .\\playwright-load\\airgap.js",
+    "airgap:visible:100": "set COOKIE_ACTION=visible&& set CONCURRENCY=100&& node .\\playwright-load\\airgap.js",
+    "airgap:visible:500": "set COOKIE_ACTION=visible&& set CONCURRENCY=500&& node .\\playwright-load\\airgap.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "playwright": "^1.62.1"
+  }
+}

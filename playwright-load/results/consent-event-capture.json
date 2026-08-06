@@ -1,0 +1,945 @@
+{
+  "scenario": "consent-event-capture",
+  "baseUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com",
+  "capturedAt": "2026-08-06T12:14:32.089Z",
+  "finalUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com/",
+  "capture": {
+    "startedAt": "2026-08-06T12:14:14.296Z",
+    "events": [
+      {
+        "ts": 1786018457995,
+        "type": "click",
+        "isTrusted": true,
+        "target": {
+          "tag": "div",
+          "id": "transcend-consent-manager",
+          "className": "",
+          "role": null,
+          "text": ""
+        },
+        "activeElement": {
+          "tag": "div",
+          "id": "transcend-consent-manager",
+          "className": "",
+          "role": null,
+          "text": ""
+        },
+        "path": [
+          {
+            "tag": "div",
+            "id": "transcend-consent-manager",
+            "className": "",
+            "role": null,
+            "text": ""
+          },
+          {
+            "tag": "html",
+            "id": "",
+            "className": "",
+            "role": null,
+            "text": "Public Landing Page Placeholder Have a Rx? Get started Sign in to LillyDirect </> Conditions Alzheimers Disease Autoimmune Cancer Dermatology Diabetes Migraine "
+          },
+          {
+            "tag": "#document",
+            "id": "",
+            "className": "",
+            "role": null,
+            "text": ""
+          },
+          {
+            "tag": "",
+            "id": "",
+            "className": "",
+            "role": null,
+            "text": ""
+          }
+        ]
+      },
+      {
+        "ts": 1786018459523,
+        "type": "click",
+        "isTrusted": true,
+        "target": {
+          "tag": "div",
+          "id": "transcend-consent-manager",
+          "className": "",
+          "role": null,
+          "text": ""
+        },
+        "activeElement": {
+          "tag": "body",
+          "id": "",
+          "className": "",
+          "role": null,
+          "text": "Public Landing Page Placeholder Have a Rx? Get started Sign in to LillyDirect </> Conditions Alzheimers Disease Autoimmune Cancer Dermatology Diabetes Migraine "
+        },
+        "path": [
+          {
+            "tag": "div",
+            "id": "transcend-consent-manager",
+            "className": "",
+            "role": null,
+            "text": ""
+          },
+          {
+            "tag": "html",
+            "id": "",
+            "className": "",
+            "role": null,
+            "text": "Public Landing Page Placeholder Have a Rx? Get started Sign in to LillyDirect </> Conditions Alzheimers Disease Autoimmune Cancer Dermatology Diabetes Migraine "
+          },
+          {
+            "tag": "#document",
+            "id": "",
+            "className": "",
+            "role": null,
+            "text": ""
+          },
+          {
+            "tag": "",
+            "id": "",
+            "className": "",
+            "role": null,
+            "text": ""
+          }
+        ]
+      },
+      {
+        "ts": 1786018459524,
+        "type": "click",
+        "isTrusted": true,
+        "target": {
+          "tag": "div",
+          "id": "transcend-consent-manager",
+          "className": "",
+          "role": null,
+          "text": ""
+        },
+        "activeElement": {
+          "tag": "div",
+          "id": "transcend-consent-manager",
+          "className": "",
+          "role": null,
+          "text": ""
+        },
+        "path": [
+          {
+            "tag": "div",
+            "id": "transcend-consent-manager",
+            "className": "",
+            "role": null,
+            "text": ""
+          },
+          {
+            "tag": "html",
+            "id": "",
+            "className": "",
+            "role": null,
+            "text": "Public Landing Page Placeholder Have a Rx? Get started Sign in to LillyDirect </> Conditions Alzheimers Disease Autoimmune Cancer Dermatology Diabetes Migraine "
+          },
+          {
+            "tag": "#document",
+            "id": "",
+            "className": "",
+            "role": null,
+            "text": ""
+          },
+          {
+            "tag": "",
+            "id": "",
+            "className": "",
+            "role": null,
+            "text": ""
+          }
+        ]
+      },
+      {
+        "ts": 1786018459525,
+        "type": "input",
+        "isTrusted": true,
+        "target": {
+          "tag": "div",
+          "id": "transcend-consent-manager",
+          "className": "",
+          "role": null,
+          "text": ""
+        },
+        "activeElement": {
+          "tag": "div",
+          "id": "transcend-consent-manager",
+          "className": "",
+          "role": null,
+          "text": ""
+        },
+        "path": [
+          {
+            "tag": "div",
+            "id": "transcend-consent-manager",
+            "className": "",
+            "role": null,
+            "text": ""
+          },
+          {
+            "tag": "html",
+            "id": "",
+            "className": "",
+            "role": null,
+            "text": "Public Landing Page Placeholder Have a Rx? Get started Sign in to LillyDirect </> Conditions Alzheimers Disease Autoimmune Cancer Dermatology Diabetes Migraine "
+          },
+          {
+            "tag": "#document",
+            "id": "",
+            "className": "",
+            "role": null,
+            "text": ""
+          },
+          {
+            "tag": "",
+            "id": "",
+            "className": "",
+            "role": null,
+            "text": ""
+          }
+        ]
+      },
+      {
+        "ts": 1786018460603,
+        "type": "click",
+        "isTrusted": true,
+        "target": {
+          "tag": "div",
+          "id": "transcend-consent-manager",
+          "className": "",
+          "role": null,
+          "text": ""
+        },
+        "activeElement": {
+          "tag": "body",
+          "id": "",
+          "className": "",
+          "role": null,
+          "text": "Public Landing Page Placeholder Have a Rx? Get started Sign in to LillyDirect </> Conditions Alzheimers Disease Autoimmune Cancer Dermatology Diabetes Migraine "
+        },
+        "path": [
+          {
+            "tag": "div",
+            "id": "transcend-consent-manager",
+            "className": "",
+            "role": null,
+            "text": ""
+          },
+          {
+            "tag": "html",
+            "id": "",
+            "className": "",
+            "role": null,
+            "text": "Public Landing Page Placeholder Have a Rx? Get started Sign in to LillyDirect </> Conditions Alzheimers Disease Autoimmune Cancer Dermatology Diabetes Migraine "
+          },
+          {
+            "tag": "#document",
+            "id": "",
+            "className": "",
+            "role": null,
+            "text": ""
+          },
+          {
+            "tag": "",
+            "id": "",
+            "className": "",
+            "role": null,
+            "text": ""
+          }
+        ]
+      },
+      {
+        "ts": 1786018460604,
+        "type": "click",
+        "isTrusted": true,
+        "target": {
+          "tag": "div",
+          "id": "transcend-consent-manager",
+          "className": "",
+          "role": null,
+          "text": ""
+        },
+        "activeElement": {
+          "tag": "div",
+          "id": "transcend-consent-manager",
+          "className": "",
+          "role": null,
+          "text": ""
+        },
+        "path": [
+          {
+            "tag": "div",
+            "id": "transcend-consent-manager",
+            "className": "",
+            "role": null,
+            "text": ""
+          },
+          {
+            "tag": "html",
+            "id": "",
+            "className": "",
+            "role": null,
+            "text": "Public Landing Page Placeholder Have a Rx? Get started Sign in to LillyDirect </> Conditions Alzheimers Disease Autoimmune Cancer Dermatology Diabetes Migraine "
+          },
+          {
+            "tag": "#document",
+            "id": "",
+            "className": "",
+            "role": null,
+            "text": ""
+          },
+          {
+            "tag": "",
+            "id": "",
+            "className": "",
+            "role": null,
+            "text": ""
+          }
+        ]
+      },
+      {
+        "ts": 1786018460604,
+        "type": "input",
+        "isTrusted": true,
+        "target": {
+          "tag": "div",
+          "id": "transcend-consent-manager",
+          "className": "",
+          "role": null,
+          "text": ""
+        },
+        "activeElement": {
+          "tag": "div",
+          "id": "transcend-consent-manager",
+          "className": "",
+          "role": null,
+          "text": ""
+        },
+        "path": [
+          {
+            "tag": "div",
+            "id": "transcend-consent-manager",
+            "className": "",
+            "role": null,
+            "text": ""
+          },
+          {
+            "tag": "html",
+            "id": "",
+            "className": "",
+            "role": null,
+            "text": "Public Landing Page Placeholder Have a Rx? Get started Sign in to LillyDirect </> Conditions Alzheimers Disease Autoimmune Cancer Dermatology Diabetes Migraine "
+          },
+          {
+            "tag": "#document",
+            "id": "",
+            "className": "",
+            "role": null,
+            "text": ""
+          },
+          {
+            "tag": "",
+            "id": "",
+            "className": "",
+            "role": null,
+            "text": ""
+          }
+        ]
+      },
+      {
+        "ts": 1786018461395,
+        "type": "click",
+        "isTrusted": true,
+        "target": {
+          "tag": "div",
+          "id": "transcend-consent-manager",
+          "className": "",
+          "role": null,
+          "text": ""
+        },
+        "activeElement": {
+          "tag": "div",
+          "id": "transcend-consent-manager",
+          "className": "",
+          "role": null,
+          "text": ""
+        },
+        "path": [
+          {
+            "tag": "div",
+            "id": "transcend-consent-manager",
+            "className": "",
+            "role": null,
+            "text": ""
+          },
+          {
+            "tag": "html",
+            "id": "",
+            "className": "",
+            "role": null,
+            "text": "Public Landing Page Placeholder Have a Rx? Get started Sign in to LillyDirect </> Conditions Alzheimers Disease Autoimmune Cancer Dermatology Diabetes Migraine "
+          },
+          {
+            "tag": "#document",
+            "id": "",
+            "className": "",
+            "role": null,
+            "text": ""
+          },
+          {
+            "tag": "",
+            "id": "",
+            "className": "",
+            "role": null,
+            "text": ""
+          }
+        ]
+      }
+    ],
+    "logs": [
+      {
+        "ts": 1786018454517,
+        "level": "log",
+        "args": [
+          "Bootstrap running"
+        ]
+      },
+      {
+        "ts": 1786018454590,
+        "level": "log",
+        "args": [
+          "[DataLayer] Initialized successfully"
+        ]
+      },
+      {
+        "ts": 1786018455094,
+        "level": "log",
+        "args": [
+          "starttime=undefined"
+        ]
+      },
+      {
+        "ts": 1786018455095,
+        "level": "log",
+        "args": [
+          "date=Thu Aug 06 2026 17:44:15 GMT+0530 (India Standard Time)"
+        ]
+      },
+      {
+        "ts": 1786018455095,
+        "level": "log",
+        "args": [
+          "sess_secs=NaN"
+        ]
+      },
+      {
+        "ts": 1786018455131,
+        "level": "log",
+        "args": [
+          "[embed] beginAuthFlow — debugEnabled:",
+          "true"
+        ]
+      },
+      {
+        "ts": 1786018455207,
+        "level": "log",
+        "args": [
+          "[embed] beginAuthFlow — session response:",
+          "{\"genesysToken\":null}"
+        ]
+      },
+      {
+        "ts": 1786018455207,
+        "level": "log",
+        "args": [
+          "[embed] beginAuthFlow — no auth needed, token:",
+          "null"
+        ]
+      },
+      {
+        "ts": 1786018455208,
+        "level": "log",
+        "args": [
+          "[embed] finish — token:",
+          "null"
+        ]
+      }
+    ],
+    "transcendCalls": [],
+    "storageSnapshot": {
+      "localStorage": [
+        {
+          "key": "tcmConsent",
+          "value": "{\"purposes\":{\"ProgramTcpaTpo\":\"Auto\",\"EnterpriseHipaaAuthorization\":\"Auto\",\"EnterpriseMarketing\":\"Auto\",\"EnterpriseMarketResearch\":\"Auto\",\"EnterpriseMedicalResearch\":\"Auto\",\"EmailCommunicationPreference\":\"Auto\",\"ProgramTcpaMarketing\":\"Auto\",\"Functional\":true,\"Analytics\":true,\"Advertising\":false,\"SaleOfInfo\":\"Auto\"},\"timestamp\":\"2026-08-06T12:14:21.396Z\",\"confirmed\":true,\"prompted\":true,\"updated\":true}"
+        },
+        {
+          "key": "tcmu",
+          "value": "2"
+        }
+      ],
+      "sessionStorage": [
+        {
+          "key": "unex_previous_page_url",
+          "value": "https://pharmacy-patient-portal.dev.apps.lilly.com/"
+        },
+        {
+          "key": "tcms",
+          "value": "1"
+        }
+      ],
+      "documentCookie": "gtm.start=1786018355306; PageNumber=2; tcm={\"purposes\":{\"ProgramTcpaTpo\":\"Auto\",\"EnterpriseHipaaAuthorization\":\"Auto\",\"EnterpriseMarketing\":\"Auto\",\"EnterpriseMarketResearch\":\"Auto\",\"EnterpriseMedicalResearch\":\"Auto\",\"EmailCommunicationPreference\":\"Auto\",\"ProgramTcpaMarketing\":\"Auto\",\"Functional\":true,\"Analytics\":true,\"Advertising\":false,\"SaleOfInfo\":\"Auto\"},\"timestamp\":\"2026-08-06T12:14:21.396Z\",\"confirmed\":true,\"prompted\":true,\"updated\":true}",
+      "cookies": [
+        {
+          "name": "esctx-wF81nVVZTQ",
+          "domain": ".login.microsoftonline.com",
+          "value": "AQABCQEAAAAdDD7nC9b5Q7JPd_okEQRFRXZvU3RzQXJ0aWZhY3RzDQAAAAAApBmNGAmL2gH1f309kxPXHtO83eYCtsYYimrQr-X1K0k3Dmo_JsNWmPZ8FGpKrzMJv3yDqjBdTDr3-LZhJvSBfKbWct0iRlVVNB9YMy9dDS8IclLlB8P7m-OI6D6ATBf4foyjJdHUe_-cc3HVG4NS_yAA"
+        },
+        {
+          "name": "x-ms-gateway-slice",
+          "domain": "login.microsoftonline.com",
+          "value": "estsfd"
+        },
+        {
+          "name": "stsservicecookie",
+          "domain": "login.microsoftonline.com",
+          "value": "estsfd"
+        },
+        {
+          "name": "AADSSO",
+          "domain": ".login.microsoftonline.com",
+          "value": "NA|NoExtension"
+        },
+        {
+          "name": "esctx",
+          "domain": ".login.microsoftonline.com",
+          "value": "PBgABBwEAAAAdDD7nC9b5Q7JPd_okEQRFRXZvU3RzQXJ0aWZhY3RzDQAAAAAAzIzYk1LlA_1JjT5k1CMsqoyL58DQv-HgsrQxNLrpN6Qt0yCjrAmQHuDFa2XiAUjDpYQZlt_XKrh2yde_kHeIEf1OIQWiZ6wiKzebJlzq97JUm-lG6eWFOQEGOP5Buz2zxaM9ziLGRNLpEF1Rby9Fom0mMwac_aCC0HE2wtugqzc87AKMbSQPk6bXDfjm9wWD4k3o9nyqvCb8VWni2uE7tImTCfDiK2DIbzCg1fg9Nv3e0zTKjnWqpnk-ytcOssR5C5fboYBjQDN1NTwcxbtnN179e-l8XIfrI7UU_MoOyWywOL5BgbdtPmatFEHn9YZN1HJHvfNj3gFx17mm_RJIyF-dS1XG4hHlc7xOhBVVicL4AY6iJ914Zp5S35IFq9M780B5FR_ALCpWN7z8JFbSZrZ511uECoS2p-BOw8T0ases8_6-53Ae2yKCOxXygN45o4CRS7GtQw9cALR_l-MZbKsQQmqpJSWaOaHDjKrhszxp_D46kSXlp9yXsN-kTwlu4b5z75hEo-NY2kVvo4_Br8f4GjE7tL-QmNhEEXdEWSDMSlIuYZG1KVUVu-m1NOqfakOuFtNK2wLs0uyLY21I7IvGVqj54kVdrJKU1VN7mZoeZWMbzzH7PiU2iNBKJkHzHcSDvIUsZo_swPY75TyG0ZENVJ6qQf3A_QBVCksEaXfWTKKorM09K_HB_1fviBJPAZYybc9GdZBH_Q6qWphtKz5VFgYpaoMokCTncpMe11wgAA"
+        },
+        {
+          "name": "esctx-JViJLcKUwQ8",
+          "domain": ".login.microsoftonline.com",
+          "value": "AQABCQEAAAAdDD7nC9b5Q7JPd_okEQRFRXZvU3RzQXJ0aWZhY3RzDQAAAAAA-eyhAkWepF4PY_NCaO8fCrrYWfPVmqRy34mvu_sMJ2rsXPhVCfxMHlJPNcmQhWXzfTx1fgfu3q4f_D-rfLAFI_bBG4gn7UUigUmq8MonvjoYcPGguIMHx3wzvmaFNKdSbCQQ9ZPfGH6QfE6x8dC6ziAA"
+        },
+        {
+          "name": "brcap",
+          "domain": ".login.microsoftonline.com",
+          "value": "0"
+        },
+        {
+          "name": "fpc",
+          "domain": "autologon.microsoftazuread-sso.com",
+          "value": "AnRouSo0qUxEoP_0F5JkNAM"
+        },
+        {
+          "name": "x-ms-gateway-slice",
+          "domain": "autologon.microsoftazuread-sso.com",
+          "value": "estsfd"
+        },
+        {
+          "name": "stsservicecookie",
+          "domain": "autologon.microsoftazuread-sso.com",
+          "value": "estsfd"
+        },
+        {
+          "name": "uaid",
+          "domain": ".login.live.com",
+          "value": "7e8e21d589ad44d191b490e004ad4fc1"
+        },
+        {
+          "name": "MSPRequ",
+          "domain": ".login.live.com",
+          "value": "id=N&lt=1786018334&co=1"
+        },
+        {
+          "name": "wlidperf",
+          "domain": ".microsoftonline.com",
+          "value": "FR=L&ST=1786018350912"
+        },
+        {
+          "name": "ESTSAUTHPERSISTENT",
+          "domain": ".login.microsoftonline.com",
+          "value": "1.ARgAgZqlGKjuMEyUitiCTNwlgLkMGNGd9RVNu_CqSqIHJWIAAAAYAA.BQABFwQAAAADAOz_BQD0_0V2b1N0c0FydGlmYWN0cxAAAAAAAGritnxRtX-0p3x-xHMPR0oxqNSoeCN8ENt6Bt9tDg2m1kkgrjDn7q116pQTJp4OrkG8KrZ_L9Pr_1vL2PLA_RqOlXxGwicRG8vsClpNkBr7pZzI7KxHCsb5TcoLhC0qJdjOAbkUpJfc1dXSYTs5tZuRGwfLjksgaEtjCeCQtZls3ryXmLjG_yusmOJWwonAyvFXNWgKXo8YE6bOk9Chb0oIRtFRJs_-awyRxTIr6bjwPT274VqIozEyyNE8GhPPVsYUhIHYPOQAXtqdoZ_p6ifPzhO20JnP8TgGiJNLA8zNJCWYogx4b7n9qvEwvZWOogDMoQIfgSsAigW0O9A247hHF6Dsisg5CeviACOZOm1A75-4DeZplZNBnsg-n-puawh9IrqCoy8zRyJb7md4rjVY_krbZsjrJvXWmx7j9wIpdor3qaeZORZbC49_UIV3k91kwgQv_8UNR0gVIB5tPVhy9hHfUK1rcPO04Pe4njVGeYibv-ToTgHUjxsLBuBv7L_tO4ZDPDOUNHs24S0HFzduamNk7SadwO5ZnDZIZ9r4Dc-0_oYSQ3CIVDU_OQKyRY3SZgZTT0GvZbs729CeKc9uhlWDi0xIZmsEoEQlZwmA9w2gZVJ0bhR0pH_FR-1ZCoFbXS4g1LjkP0aSPqy0EuHpF19klodoiNFkHlwTFjscADu0tnvoC3yLYPuyN3uEuJI-54UgrxE7G3B2O9aIlqU7yDS-28jHmPk1dh4u3p5oGrvLPPyCHUAlEdIV8Z5lAftH99bcfxfQH6mb6uha7FfOz5TE1KGPNBGHFSj9XMQtcggFTYqogtm1f3CwPCAGX7hn8PS_khtIahBjOADVFlATP03nE-I6tAgj35mjEbsg2iVxKpzXUDKSDMfY5HaMLGyzYOt4GuaLz_UYWBf1MMw7UwAisRAn7ROMhR5IqgDSpHgErRErrTDPrHbyiSo54sEBtOBkoYpyLE6qV8_qteBQy0BhUgeDbDcfBm9I-WqDICsaGf50cMOcWjAv3vqJ3ImVGEM5EXc"
+        },
+        {
+          "name": "ESTSAUTH",
+          "domain": ".login.microsoftonline.com",
+          "value": "1.ARgAgZqlGKjuMEyUitiCTNwlgLkMGNGd9RVNu_CqSqIHJWIAAAAYAA.BQABFwQAAAADAOz_BQD0_0V2b1N0c0FydGlmYWN0cw8AAAAAALGffNIEEUz284KlJ0QLAbkciEF-4cX9zva1x2_3yQT7pOIWo3BKTumI4DY6kQN1Ao0HhkO7EOKSmlltDzlUgaJSWhOS_cxuxW-Vi4j-Rupv-h-9RvwPpny5d3Q9zTyMTUO-dDjj2MsiSk-On-RUuIq3vL2thUFb-hmuU6-SO0SvA7lq7TdDNoO28qD60klXN7GLpxcmHr1hdAPbQsp-6BxoizesVKeUh3qUSdVYrDK8zHSQ-p56SkPh2GeaTD389CCzdTdeW8bmxyFmJ5LauDJLGNhz42LEl7TUdPKTZEUrRyTU5hVI41hFCBxMJgl8rWtIxLQmw5vTA-VrlvL634mFhaIttazh-XC5kz9A4qeR7_Sp7nPzOuC7eA_e8CUVchq7N0-5Sx84Wrv8FS9ED1buBLrKQZfsSzX4G6jN89gZiwKVVSlEjVycIL9rIyM5WvgQGxCk8SJ5WuTCAxLRF6DFCcCf3gPJPSDLs-4c4PSiC1-lEdlJ4Sy3a_tQXh2qqBYXUOinmzvnPoP_qWJwUbTHv7OvQfwuG0fCRKuBoqQHmDJfQnKfvwEVOYadynSsIIugCzdZicNYRJb0X6wpsSki6-k7eJHfDONHg2xYQRGas92LW4Myy-WPZ9wkZ0IK8N0sbnhJLtrPkNWM6skMsKQN3yz4AuZZ5lYF9F6dyXriZSOHbIFd-jnHzxGG6xcbuaXdeoP_LNGSaTxiqusTTHDw0t-KmPgmMONEW_F2pFqMukylLrNePnpl7ZyqcnbDimHhgg8dL6gp7BefamO5A-64qmDoJKBW3QEnDmY_E7vR0Hw6kUFQV9eXqMedqS6uOslpRYNJBhaYitH-8QjhIPbC7va0of28ubbkKvaDCmwRtM-gmKU0gp6tQgq8TnE5VdJjZmMSgWDTz8LqaVO6_UH7xX3lVxonZ4dI9A5ekMKHkbv__nEkfmvcPCF0VBZQK1PmZnAxA8MfnP4VPTpj7riar085AX3jqEMOamOauoLro8I4h46vUMj3HW_ApBzW7CQlwwdDGIGOGdr0wXIyPtZYw5alLJZeOMu0uez7lwqdVkqCD58mC0JKP14evUUvmCO4JI96WFXcHKJPI5NOv8nrQs2sXj2S74j-fKkc-bnY6TBib3KEBqu2x6t0zW_TJ16wUM0algs2ddIHczYeNB18FKT_aC0cyQU8r5q9UbFm7gPIwqySWpjPFzUUREDHVc1kpJURcNVYtWebm9kNKbyzznRgV6_NOjc"
+        },
+        {
+          "name": "ESTSAUTHLIGHT",
+          "domain": "login.microsoftonline.com",
+          "value": "+007b044a-7c3d-2ce0-34aa-77b952854a74"
+        },
+        {
+          "name": "buid",
+          "domain": "login.microsoftonline.com",
+          "value": "1.ARgAgZqlGKjuMEyUitiCTNwlgLkMGNGd9RVNu_CqSqIHJWIAAAAYAA.AQABGgEAAAAdDD7nC9b5Q7JPd_okEQRFRXZvU3RzQXJ0aWZhY3RzAwAAAAAAsbSym6W5jIikgiKDRa64JaQHktluzVUME7n_Z5J0ggOfWiYLbDcFuA1nBM1T_DcEfl4x2uPvSfuHIRQadEQ0YPoKGGuAhJGVcY0t6f2vuPMwUf8px9qQJuV0AgpVP77B8XizzzXAsde5RzVYdDhNqHntqCf5h1r0F7lnVIUTdEIgAA"
+        },
+        {
+          "name": "CCState",
+          "domain": ".login.microsoftonline.com",
+          "value": "RWhJS0VKWjBjOHJJWW4xSnBVa3BtbnVaQmUwPQ=="
+        },
+        {
+          "name": "SignInStateCookie",
+          "domain": ".login.microsoftonline.com",
+          "value": "CBQABFgIAAAADAOz_BQD0_0V2b1N0c0FydGlmYWN0cwYAAAAAAD3iVt78Ob78pZs9WEXaS9hXSOME3D2tAKVM7Er5zxleK16XjDdHrpvWLD-xpVpSxwjyXz4OrnCbqTCHrgVw-bU--MUogtJbP_AGnpfR-79IeeHiSKLzVy033YJOFsJjDrxHP9uXlKvB7n6SGjC_psp5CysKVeOw7Ze0iOLqZcznV5F5GJVxUREaOB2w76-OXPG29k5md1swHnnsgxSwLQdWp8ueGKI4fPXEs9cVvjx5wkvHY2jcjz6dVqa3ji2JBfMrYLS3Q5I9hFd-N2XL-j-RAWsCFYW6xKgKO2jlvOnebXSTm58xEVrEjbPVbY4V545N4r0g8fCd26BddbyTKLlb-uiX-3jLv7a_8rHXw-5LaQxCASIYUy5y4EM-zlIxe-xjYM5CbZNA_ApCnwJVJIaUyhfuM31eFVQ1jFt-odUXidQScrCAqvG-SA93YTjKvN_9mJCAZZBRL6yxXYBb0Jo0T0UQdbHpvyMEO-kVNDWaqakMqD3rxWcjpAS-K5HgdxQnfZEd9xqA_119kgcsoVndYEN_ccHmTIrptm_FZzt9jQTodPEE3hRox2HforbjGwGY32bE23Y0CdeBOY9o9FvirzDpIdJuAWoIt7FGOu7q5rR4DNSLj26pYuCG4VGl0h7rZUbV-0D7UprVmxBQJYp1iYHmz1PWTlpZyZb1XJ70rvU3VO-Xut-yAeyDdVzW9B5h6XeH2CMRS6hspvbvlHhzRiRr2g-qRRE5oKxwI-UZpRnqalm2UxE7Cp9OMjUX-7Pir1hIEoPoqP_QyOiRha_lIpBENY3hbDk"
+        },
+        {
+          "name": "fpc",
+          "domain": "login.microsoftonline.com",
+          "value": "Ao9EE9ELX2dEkYpgje0_lZJMG9IRAQAAAB1xBuIOAAAAZSs2ggEAAAAucQbiDgAAAA"
+        },
+        {
+          "name": "_oauth2_proxy",
+          "domain": "pharmacy-patient-portal.dev.apps.lilly.com",
+          "value": "djIuWDI5aGRYUm9NbDl3Y205NGVTMHhZMkkxWVRnd05qTmxaREprWmpKbVpHWTNaV0V5WlRBNE5UZ3haamc1Tmcud2pPLW9lRERyM0dPbjA4bzM2TmxjZw==|1786018353|eblxttEqL45cIKLxTIBD6yNI-FbUVDUXAU_ASkWNbdo="
+        },
+        {
+          "name": "__cf_bm",
+          "domain": ".dev.fdl.lilly.com",
+          "value": "dAJ5d3UgmOPObGg6LvIMKc7HBr2QE9v4QcJHFmt1S3I-1786018354.3678052-1.0.1.1-BQvYoxqAOmXERSZ1oW7nfnDjsPiKCnK0.kNQZxjqcGPLxEKqOWsWbvYZx_eNEI13qq3.J9PNZHc3FrCpNDHO995qNOKnXOzpbRjBtsC1K0xBQ2uq51SVR7Eu0C1uXZjP"
+        },
+        {
+          "name": "__cf_bm",
+          "domain": ".dev.unex.lilly.com",
+          "value": "hRnoKbEESak48kwnuD7_a.OfQ0ABxWQjySSDoPPXhDM-1786018355.0024927-1.0.1.1-656YH9CIuDlrK9Lpu.penUux.6FNgWDBT8m5Dw.zd.VuKBlLbw.DYOe01Qfx44tmO9_1nQuMRFP0uaFmP5bKOatJrdckCP1iMfzN4RFiQxAHC4ie_Y876H7n7ov0ewb5"
+        },
+        {
+          "name": "gtm.start",
+          "domain": "pharmacy-patient-portal.dev.apps.lilly.com",
+          "value": "1786018355306"
+        },
+        {
+          "name": "__cf_bm",
+          "domain": ".dev.apps.lilly.com",
+          "value": "2Lfd6flPd2XXewUCsxr8oRcz5uTlc9e9uSAPry7fIS4-1786018454.1675587-1.0.1.1-8gTdw6GdLoeu1KqTYFtES23Hn_Zpt0hEEDX9nRnl5c7TRtGjLHIEn9p9S8UbYuSVNJg.5p6r_yPwZIC4oH8VwSL9eq1umZ0iAHI8bSRgL2QIgalDs5W0IDVoQ5vaWhcZ"
+        },
+        {
+          "name": "PageNumber",
+          "domain": "pharmacy-patient-portal.dev.apps.lilly.com",
+          "value": "2"
+        },
+        {
+          "name": "JSESSIONID",
+          "domain": ".nr-data.net",
+          "value": "e3eebcb9031007bc"
+        },
+        {
+          "name": "tcm",
+          "domain": ".lilly.com",
+          "value": "{\"purposes\":{\"ProgramTcpaTpo\":\"Auto\",\"EnterpriseHipaaAuthorization\":\"Auto\",\"EnterpriseMarketing\":\"Auto\",\"EnterpriseMarketResearch\":\"Auto\",\"EnterpriseMedicalResearch\":\"Auto\",\"EmailCommunicationPreference\":\"Auto\",\"ProgramTcpaMarketing\":\"Auto\",\"Functional\":true,\"Analytics\":true,\"Advertising\":false,\"SaleOfInfo\":\"Auto\"},\"timestamp\":\"2026-08-06T12:14:21.396Z\",\"confirmed\":true,\"prompted\":true,\"updated\":true}"
+        }
+      ]
+    }
+  },
+  "network": [
+    {
+      "ts": 1786018454311,
+      "kind": "request",
+      "method": "GET",
+      "url": "https://transcend-cdn.com/cm-test/074a9383-7195-473e-88d5-50f1e7e7eb16/airgap.js",
+      "postData": null
+    },
+    {
+      "ts": 1786018454535,
+      "kind": "response",
+      "status": 200,
+      "url": "https://transcend-cdn.com/cm-test/074a9383-7195-473e-88d5-50f1e7e7eb16/airgap.js"
+    },
+    {
+      "ts": 1786018454576,
+      "kind": "request",
+      "method": "GET",
+      "url": "https://transcend-cdn.com/cm-test/074a9383-7195-473e-88d5-50f1e7e7eb16/ui.js",
+      "postData": null
+    },
+    {
+      "ts": 1786018454836,
+      "kind": "response",
+      "status": 200,
+      "url": "https://transcend-cdn.com/cm-test/074a9383-7195-473e-88d5-50f1e7e7eb16/ui.js"
+    },
+    {
+      "ts": 1786018454836,
+      "kind": "request",
+      "method": "GET",
+      "url": "https://transcend-cdn.com/cm-test/074a9383-7195-473e-88d5-50f1e7e7eb16/cm.css",
+      "postData": null
+    },
+    {
+      "ts": 1786018454836,
+      "kind": "request",
+      "method": "GET",
+      "url": "https://transcend-cdn.com/cm-test/074a9383-7195-473e-88d5-50f1e7e7eb16/translations/en.json",
+      "postData": null
+    },
+    {
+      "ts": 1786018454837,
+      "kind": "response",
+      "status": 200,
+      "url": "https://transcend-cdn.com/cm-test/074a9383-7195-473e-88d5-50f1e7e7eb16/cm.css"
+    },
+    {
+      "ts": 1786018454837,
+      "kind": "response",
+      "status": 200,
+      "url": "https://transcend-cdn.com/cm-test/074a9383-7195-473e-88d5-50f1e7e7eb16/translations/en.json"
+    }
+  ],
+  "consentPayloadValidation": {
+    "passed": true,
+    "expectedPurposes": {
+      "ProgramTcpaTpo": "Auto",
+      "EnterpriseHipaaAuthorization": "Auto",
+      "EnterpriseMarketing": "Auto",
+      "EnterpriseMarketResearch": "Auto",
+      "EnterpriseMedicalResearch": "Auto",
+      "EmailCommunicationPreference": "Auto",
+      "ProgramTcpaMarketing": "Auto",
+      "Functional": true,
+      "Analytics": true,
+      "Advertising": false,
+      "SaleOfInfo": "Auto"
+    },
+    "matchedPayload": {
+      "source": "storage.localStorage",
+      "url": null,
+      "key": "tcmConsent",
+      "passed": true,
+      "reason": null,
+      "mismatch": null,
+      "flags": null,
+      "timestamp": "2026-08-06T12:14:21.396Z",
+      "payload": {
+        "purposes": {
+          "ProgramTcpaTpo": "Auto",
+          "EnterpriseHipaaAuthorization": "Auto",
+          "EnterpriseMarketing": "Auto",
+          "EnterpriseMarketResearch": "Auto",
+          "EnterpriseMedicalResearch": "Auto",
+          "EmailCommunicationPreference": "Auto",
+          "ProgramTcpaMarketing": "Auto",
+          "Functional": true,
+          "Analytics": true,
+          "Advertising": false,
+          "SaleOfInfo": "Auto"
+        },
+        "timestamp": "2026-08-06T12:14:21.396Z",
+        "confirmed": true,
+        "prompted": true,
+        "updated": true
+      }
+    },
+    "checkedCandidates": 8,
+    "sampleCandidates": [
+      {
+        "source": "console.log",
+        "url": null,
+        "key": null,
+        "passed": false,
+        "reason": "missing-purposes",
+        "mismatch": null,
+        "flags": null,
+        "timestamp": null,
+        "payload": {
+          "genesysToken": null
+        }
+      },
+      {
+        "source": "console.log",
+        "url": null,
+        "key": null,
+        "passed": false,
+        "reason": "missing-purposes",
+        "mismatch": null,
+        "flags": null,
+        "timestamp": null,
+        "payload": {
+          "genesysToken": null
+        }
+      },
+      {
+        "source": "storage.localStorage",
+        "url": null,
+        "key": "tcmConsent",
+        "passed": true,
+        "reason": null,
+        "mismatch": null,
+        "flags": null,
+        "timestamp": "2026-08-06T12:14:21.396Z",
+        "payload": {
+          "purposes": {
+            "ProgramTcpaTpo": "Auto",
+            "EnterpriseHipaaAuthorization": "Auto",
+            "EnterpriseMarketing": "Auto",
+            "EnterpriseMarketResearch": "Auto",
+            "EnterpriseMedicalResearch": "Auto",
+            "EmailCommunicationPreference": "Auto",
+            "ProgramTcpaMarketing": "Auto",
+            "Functional": true,
+            "Analytics": true,
+            "Advertising": false,
+            "SaleOfInfo": "Auto"
+          },
+          "timestamp": "2026-08-06T12:14:21.396Z",
+          "confirmed": true,
+          "prompted": true,
+          "updated": true
+        }
+      },
+      {
+        "source": "storage.localStorage",
+        "url": null,
+        "key": "tcmConsent",
+        "passed": true,
+        "reason": null,
+        "mismatch": null,
+        "flags": null,
+        "timestamp": "2026-08-06T12:14:21.396Z",
+        "payload": {
+          "purposes": {
+            "ProgramTcpaTpo": "Auto",
+            "EnterpriseHipaaAuthorization": "Auto",
+            "EnterpriseMarketing": "Auto",
+            "EnterpriseMarketResearch": "Auto",
+            "EnterpriseMedicalResearch": "Auto",
+            "EmailCommunicationPreference": "Auto",
+            "ProgramTcpaMarketing": "Auto",
+            "Functional": true,
+            "Analytics": true,
+            "Advertising": false,
+            "SaleOfInfo": "Auto"
+          },
+          "timestamp": "2026-08-06T12:14:21.396Z",
+          "confirmed": true,
+          "prompted": true,
+          "updated": true
+        }
+      },
+      {
+        "source": "storage.localStorage",
+        "url": null,
+        "key": "tcmConsent",
+        "passed": true,
+        "reason": null,
+        "mismatch": null,
+        "flags": null,
+        "timestamp": "2026-08-06T12:14:21.396Z",
+        "payload": {
+          "purposes": {
+            "ProgramTcpaTpo": "Auto",
+            "EnterpriseHipaaAuthorization": "Auto",
+            "EnterpriseMarketing": "Auto",
+            "EnterpriseMarketResearch": "Auto",
+            "EnterpriseMedicalResearch": "Auto",
+            "EmailCommunicationPreference": "Auto",
+            "ProgramTcpaMarketing": "Auto",
+            "Functional": true,
+            "Analytics": true,
+            "Advertising": false,
+            "SaleOfInfo": "Auto"
+          },
+          "timestamp": "2026-08-06T12:14:21.396Z",
+          "confirmed": true,
+          "prompted": true,
+          "updated": true
+        }
+      },
+      {
+        "source": "storage.cookie",
+        "url": null,
+        "key": "tcm",
+        "passed": true,
+        "reason": null,
+        "mismatch": null,
+        "flags": null,
+        "timestamp": "2026-08-06T12:14:21.396Z",
+        "payload": {
+          "purposes": {
+            "ProgramTcpaTpo": "Auto",
+            "EnterpriseHipaaAuthorization": "Auto",
+            "EnterpriseMarketing": "Auto",
+            "EnterpriseMarketResearch": "Auto",
+            "EnterpriseMedicalResearch": "Auto",
+            "EmailCommunicationPreference": "Auto",
+            "ProgramTcpaMarketing": "Auto",
+            "Functional": true,
+            "Analytics": true,
+            "Advertising": false,
+            "SaleOfInfo": "Auto"
+          },
+          "timestamp": "2026-08-06T12:14:21.396Z",
+          "confirmed": true,
+          "prompted": true,
+          "updated": true
+        }
+      },
+      {
+        "source": "storage.cookie",
+        "url": null,
+        "key": "tcm",
+        "passed": true,
+        "reason": null,
+        "mismatch": null,
+        "flags": null,
+        "timestamp": "2026-08-06T12:14:21.396Z",
+        "payload": {
+          "purposes": {
+            "ProgramTcpaTpo": "Auto",
+            "EnterpriseHipaaAuthorization": "Auto",
+            "EnterpriseMarketing": "Auto",
+            "EnterpriseMarketResearch": "Auto",
+            "EnterpriseMedicalResearch": "Auto",
+            "EmailCommunicationPreference": "Auto",
+            "ProgramTcpaMarketing": "Auto",
+            "Functional": true,
+            "Analytics": true,
+            "Advertising": false,
+            "SaleOfInfo": "Auto"
+          },
+          "timestamp": "2026-08-06T12:14:21.396Z",
+          "confirmed": true,
+          "prompted": true,
+          "updated": true
+        }
+      },
+      {
+        "source": "storage.cookie",
+        "url": null,
+        "key": "tcm",
+        "passed": true,
+        "reason": null,
+        "mismatch": null,
+        "flags": null,
+        "timestamp": "2026-08-06T12:14:21.396Z",
+        "payload": {
+          "purposes": {
+            "ProgramTcpaTpo": "Auto",
+            "EnterpriseHipaaAuthorization": "Auto",
+            "EnterpriseMarketing": "Auto",
+            "EnterpriseMarketResearch": "Auto",
+            "EnterpriseMedicalResearch": "Auto",
+            "EmailCommunicationPreference": "Auto",
+            "ProgramTcpaMarketing": "Auto",
+            "Functional": true,
+            "Analytics": true,
+            "Advertising": false,
+            "SaleOfInfo": "Auto"
+          },
+          "timestamp": "2026-08-06T12:14:21.396Z",
+          "confirmed": true,
+          "prompted": true,
+          "updated": true
+        }
+      }
+    ]
+  },
+  "hints": [
+    "Look at capture.events for click/change target and composed path.",
+    "Look at capture.transcendCalls for SDK method invocations.",
+    "Look at network for consent/cookie/transcend request payloads."
+  ]
+}
