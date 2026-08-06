@@ -59,6 +59,12 @@ set OUTPUT_FORMAT=table&& set COOKIE_ACTION=content_check&& set COOKIE_BANNER_SE
 set BASE_URL=https://pharmacy-patient-portal.dev.apps.lilly.com&& set CONCURRENCY=100&& set TIMEOUT_MS=30000&& set OUTPUT_PATH=.\playwright-load\results\summary-url-100.json&& node .\playwright-load\url-hit-load.js
 ```
 
+### 6.1) Optional: Run 50-user auth stability check (PowerShell)
+
+```powershell
+$env:OUTPUT_FORMAT="table"; $env:COOKIE_ACTION="script_loaded"; $env:AIRGAP_SCRIPT_MATCH="airgap.js"; $env:CONCURRENCY="50"; $env:ITERATIONS="1"; $env:CONTEXT_MODE="shared"; $env:BATCH_SIZE="1"; $env:BATCH_DELAY_MS="2500"; $env:HEADLESS="false"; $env:PREFLIGHT_ENABLED="true"; $env:PREFLIGHT_STRICT="true"; $env:PREFLIGHT_RETRIES="8"; $env:PREFLIGHT_DELAY_MS="3000"; $env:AUTH_RETURN_WAIT_MS="90000"; $env:OUTPUT_PATH=".\playwright-load\results\summary-airgap-auth-50.json"; node .\playwright-load\airgap.js
+```
+
 ### 7) Generate one tabular execution report from outputs
 
 ```cmd
