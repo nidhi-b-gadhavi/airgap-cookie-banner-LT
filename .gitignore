@@ -1,2 +1,7 @@
 node_modules
 package-lock.json
+playwright-lt-summary-table.md
+K6-PLAYWRIGHT-ANALYSIS.md
+K6-PLAYWRIGHT-ANALYSIS.pdf
+.env
+K6-STARTER-GUIDE.md

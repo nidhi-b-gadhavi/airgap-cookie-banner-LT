@@ -1,0 +1,96 @@
+{
+  "scenario": "airgap-authenticated-cookie-banner",
+  "baseUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com",
+  "concurrency": 1,
+  "iterationsPerUser": 1,
+  "execution": {
+    "batchSize": 1,
+    "batchDelayMs": 3000,
+    "headless": false,
+    "contextMode": "isolated"
+  },
+  "authStatePath": "C:\\Users\\L135061\\codebase\\LDPCE\\test-cases\\load-test-cases-separated\\playwright-load\\auth-state-ms.json",
+  "cookieAction": "accept_verify",
+  "totals": {
+    "requests": 1,
+    "successCount": 0,
+    "failureCount": 1,
+    "errorRatePct": 100,
+    "totalDurationMs": 5592,
+    "throughputRps": 0.18
+  },
+  "latencyMs": {
+    "endToEnd": {
+      "count": 1,
+      "minMs": 3252,
+      "p50Ms": 3252,
+      "p95Ms": 3252,
+      "p99Ms": 3252,
+      "maxMs": 3252,
+      "avgMs": 3252
+    },
+    "initialNavigation": {
+      "count": 1,
+      "minMs": 437,
+      "p50Ms": 437,
+      "p95Ms": 437,
+      "p99Ms": 437,
+      "maxMs": 437,
+      "avgMs": 437
+    },
+    "cookieAction": {
+      "count": 1,
+      "minMs": 1927,
+      "p50Ms": 1927,
+      "p95Ms": 1927,
+      "p99Ms": 1927,
+      "maxMs": 1927,
+      "avgMs": 1927
+    },
+    "finalPageLoad": {
+      "count": 0,
+      "minMs": 0,
+      "p50Ms": 0,
+      "p95Ms": 0,
+      "p99Ms": 0,
+      "maxMs": 0,
+      "avgMs": 0
+    }
+  },
+  "cookieBanner": {
+    "attempted": 1,
+    "success": 0,
+    "successRatePct": 0
+  },
+  "sampleFailures": [
+    {
+      "ok": false,
+      "userIndex": 1,
+      "iteration": 1,
+      "status": "cookie-check-failed",
+      "reason": "host-not-found",
+      "details": {
+        "available": ""
+      },
+      "finalUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com/",
+      "durationMs": 3252
+    }
+  ],
+  "passCriteria": {
+    "passed": false,
+    "checks": [
+      {
+        "name": "consent_verify_success_rate",
+        "expected": ">= 100",
+        "actual": 0,
+        "passed": false
+      },
+      {
+        "name": "max_error_rate_pct",
+        "expected": "<= 10",
+        "actual": 100,
+        "passed": false
+      }
+    ]
+  }
+}

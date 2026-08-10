@@ -53,7 +53,8 @@ async function main() {
     fs.mkdirSync(stateDir, { recursive: true });
   }
 
-  const browser = await chromium.launch({ headless: false, slowMo: 50 });
+  // --no-sandbox required on corporate Windows where security policy blocks Chromium sandbox.
+  const browser = await chromium.launch({ headless: false, slowMo: 50, args: ['--no-sandbox', '--disable-dev-shm-usage'] });
   const context = await browser.newContext();
   const page = await context.newPage();
 

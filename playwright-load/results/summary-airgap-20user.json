@@ -4,48 +4,48 @@
   "concurrency": 20,
   "iterationsPerUser": 1,
   "execution": {
-    "batchSize": 20,
-    "batchDelayMs": 2000,
+    "batchSize": 1,
+    "batchDelayMs": 2500,
     "headless": false,
-    "contextMode": "isolated"
+    "contextMode": "shared"
   },
   "authStatePath": "C:\\Users\\L135061\\codebase\\LDPCE\\test-cases\\load-test-cases-separated\\playwright-load\\auth-state-ms.json",
   "cookieAction": "content_check",
   "totals": {
     "requests": 20,
-    "successCount": 1,
-    "failureCount": 19,
-    "errorRatePct": 95,
-    "totalDurationMs": 59153,
-    "throughputRps": 0.34
+    "successCount": 20,
+    "failureCount": 0,
+    "errorRatePct": 0,
+    "totalDurationMs": 94497,
+    "throughputRps": 0.21
   },
   "latencyMs": {
     "endToEnd": {
       "count": 20,
-      "minMs": 37247,
-      "p50Ms": 55088,
-      "p95Ms": 55095,
-      "p99Ms": 56997,
-      "maxMs": 56997,
-      "avgMs": 52311.7
+      "minMs": 1864,
+      "p50Ms": 2038,
+      "p95Ms": 3072,
+      "p99Ms": 3082,
+      "maxMs": 3082,
+      "avgMs": 2224.05
     },
     "initialNavigation": {
       "count": 20,
-      "minMs": 4304,
-      "p50Ms": 17279,
-      "p95Ms": 17496,
-      "p99Ms": 17507,
-      "maxMs": 17507,
-      "avgMs": 15342.4
+      "minMs": 248,
+      "p50Ms": 306,
+      "p95Ms": 382,
+      "p99Ms": 471,
+      "maxMs": 471,
+      "avgMs": 313.15
     },
     "cookieAction": {
       "count": 20,
-      "minMs": 6775,
-      "p50Ms": 7641,
-      "p95Ms": 8290,
-      "p99Ms": 40879,
-      "maxMs": 40879,
-      "avgMs": 9382.6
+      "minMs": 1478,
+      "p50Ms": 1621,
+      "p95Ms": 2550,
+      "p99Ms": 2552,
+      "maxMs": 2552,
+      "avgMs": 1783.9
     },
     "finalPageLoad": {
       "count": 0,
@@ -59,225 +59,24 @@
   },
   "cookieBanner": {
     "attempted": 20,
-    "success": 1,
-    "successRatePct": 5
+    "success": 20,
+    "successRatePct": 100
   },
-  "sampleFailures": [
-    {
-      "ok": false,
-      "userIndex": 2,
-      "iteration": 1,
-      "status": "cookie-check-failed",
-      "reason": "banner-content-mismatch",
-      "details": {
-        "hasExpectedContent": false,
-        "acceptAllCount": 0,
-        "rejectAllCount": 0,
-        "hasMoreChoices": false,
-        "hasPrivacyStatement": false,
-        "hasSwitchLanguage": false,
-        "extractedTextSample": "",
-        "spanNodeCount": 0,
-        "bannerPresent": false
-      },
-      "finalUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com/",
-      "durationMs": 37247
-    },
-    {
-      "ok": false,
-      "userIndex": 3,
-      "iteration": 1,
-      "status": "cookie-check-failed",
-      "reason": "banner-content-mismatch",
-      "details": {
-        "hasExpectedContent": false,
-        "acceptAllCount": 0,
-        "rejectAllCount": 0,
-        "hasMoreChoices": false,
-        "hasPrivacyStatement": false,
-        "hasSwitchLanguage": false,
-        "extractedTextSample": "",
-        "spanNodeCount": 0,
-        "bannerPresent": false
-      },
-      "finalUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com/",
-      "durationMs": 37248
-    },
-    {
-      "ok": false,
-      "userIndex": 4,
-      "iteration": 1,
-      "status": "cookie-check-failed",
-      "reason": "banner-content-mismatch",
-      "details": {
-        "hasExpectedContent": false,
-        "acceptAllCount": 0,
-        "rejectAllCount": 0,
-        "hasMoreChoices": false,
-        "hasPrivacyStatement": false,
-        "hasSwitchLanguage": false,
-        "extractedTextSample": "",
-        "spanNodeCount": 0,
-        "bannerPresent": false
-      },
-      "finalUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com/",
-      "durationMs": 55095
-    },
-    {
-      "ok": false,
-      "userIndex": 5,
-      "iteration": 1,
-      "status": "cookie-check-failed",
-      "reason": "banner-content-mismatch",
-      "details": {
-        "hasExpectedContent": false,
-        "acceptAllCount": 0,
-        "rejectAllCount": 0,
-        "hasMoreChoices": false,
-        "hasPrivacyStatement": false,
-        "hasSwitchLanguage": false,
-        "extractedTextSample": "",
-        "spanNodeCount": 0,
-        "bannerPresent": false
-      },
-      "finalUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com/",
-      "durationMs": 55086
-    },
-    {
-      "ok": false,
-      "userIndex": 6,
-      "iteration": 1,
-      "status": "cookie-check-failed",
-      "reason": "banner-content-mismatch",
-      "details": {
-        "hasExpectedContent": false,
-        "acceptAllCount": 0,
-        "rejectAllCount": 0,
-        "hasMoreChoices": false,
-        "hasPrivacyStatement": false,
-        "hasSwitchLanguage": false,
-        "extractedTextSample": "",
-        "spanNodeCount": 0,
-        "bannerPresent": false
-      },
-      "finalUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com/",
-      "durationMs": 55094
-    },
-    {
-      "ok": false,
-      "userIndex": 7,
-      "iteration": 1,
-      "status": "cookie-check-failed",
-      "reason": "banner-content-mismatch",
-      "details": {
-        "hasExpectedContent": false,
-        "acceptAllCount": 0,
-        "rejectAllCount": 0,
-        "hasMoreChoices": false,
-        "hasPrivacyStatement": false,
-        "hasSwitchLanguage": false,
-        "extractedTextSample": "",
-        "spanNodeCount": 0,
-        "bannerPresent": false
-      },
-      "finalUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com/",
-      "durationMs": 55093
-    },
-    {
-      "ok": false,
-      "userIndex": 8,
-      "iteration": 1,
-      "status": "cookie-check-failed",
-      "reason": "banner-content-mismatch",
-      "details": {
-        "hasExpectedContent": false,
-        "acceptAllCount": 0,
-        "rejectAllCount": 0,
-        "hasMoreChoices": false,
-        "hasPrivacyStatement": false,
-        "hasSwitchLanguage": false,
-        "extractedTextSample": "",
-        "spanNodeCount": 0,
-        "bannerPresent": false
-      },
-      "finalUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com/",
-      "durationMs": 55086
-    },
-    {
-      "ok": false,
-      "userIndex": 9,
-      "iteration": 1,
-      "status": "cookie-check-failed",
-      "reason": "banner-content-mismatch",
-      "details": {
-        "hasExpectedContent": false,
-        "acceptAllCount": 0,
-        "rejectAllCount": 0,
-        "hasMoreChoices": false,
-        "hasPrivacyStatement": false,
-        "hasSwitchLanguage": false,
-        "extractedTextSample": "",
-        "spanNodeCount": 0,
-        "bannerPresent": false
-      },
-      "finalUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com/",
-      "durationMs": 55087
-    },
-    {
-      "ok": false,
-      "userIndex": 10,
-      "iteration": 1,
-      "status": "cookie-check-failed",
-      "reason": "banner-content-mismatch",
-      "details": {
-        "hasExpectedContent": false,
-        "acceptAllCount": 0,
-        "rejectAllCount": 0,
-        "hasMoreChoices": false,
-        "hasPrivacyStatement": false,
-        "hasSwitchLanguage": false,
-        "extractedTextSample": "",
-        "spanNodeCount": 0,
-        "bannerPresent": false
-      },
-      "finalUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com/",
-      "durationMs": 55088
-    },
-    {
-      "ok": false,
-      "userIndex": 11,
-      "iteration": 1,
-      "status": "cookie-check-failed",
-      "reason": "banner-content-mismatch",
-      "details": {
-        "hasExpectedContent": false,
-        "acceptAllCount": 0,
-        "rejectAllCount": 0,
-        "hasMoreChoices": false,
-        "hasPrivacyStatement": false,
-        "hasSwitchLanguage": false,
-        "extractedTextSample": "",
-        "spanNodeCount": 0,
-        "bannerPresent": false
-      },
-      "finalUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com/",
-      "durationMs": 55086
-    }
-  ],
+  "sampleFailures": [],
   "passCriteria": {
-    "passed": false,
+    "passed": true,
     "checks": [
       {
         "name": "cookie_content_success_rate",
         "expected": ">= 100",
-        "actual": 5,
-        "passed": false
+        "actual": 100,
+        "passed": true
       },
       {
         "name": "max_error_rate_pct",
         "expected": "<= 10",
-        "actual": 95,
-        "passed": false
+        "actual": 0,
+        "passed": true
       }
     ]
   }

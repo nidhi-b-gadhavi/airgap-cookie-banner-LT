@@ -1,0 +1,204 @@
+{
+  "scenario": "airgap-authenticated-cookie-banner",
+  "baseUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com",
+  "concurrency": 20,
+  "iterationsPerUser": 1,
+  "execution": {
+    "batchSize": 1,
+    "batchDelayMs": 2500,
+    "headless": false,
+    "contextMode": "shared"
+  },
+  "authStatePath": "C:\\Users\\L135061\\codebase\\LDPCE\\test-cases\\load-test-cases-separated\\playwright-load\\auth-state-ms.json",
+  "cookieAction": "accept_verify",
+  "totals": {
+    "requests": 20,
+    "successCount": 0,
+    "failureCount": 20,
+    "errorRatePct": 100,
+    "totalDurationMs": 89727,
+    "throughputRps": 0.22
+  },
+  "latencyMs": {
+    "endToEnd": {
+      "count": 20,
+      "minMs": 1910,
+      "p50Ms": 1970,
+      "p95Ms": 2070,
+      "p99Ms": 2165,
+      "maxMs": 2165,
+      "avgMs": 1987
+    },
+    "initialNavigation": {
+      "count": 20,
+      "minMs": 275,
+      "p50Ms": 329,
+      "p95Ms": 402,
+      "p99Ms": 491,
+      "maxMs": 491,
+      "avgMs": 333.35
+    },
+    "cookieAction": {
+      "count": 20,
+      "minMs": 1504,
+      "p50Ms": 1507,
+      "p95Ms": 1521,
+      "p99Ms": 1525,
+      "maxMs": 1525,
+      "avgMs": 1509.85
+    },
+    "finalPageLoad": {
+      "count": 0,
+      "minMs": 0,
+      "p50Ms": 0,
+      "p95Ms": 0,
+      "p99Ms": 0,
+      "maxMs": 0,
+      "avgMs": 0
+    }
+  },
+  "cookieBanner": {
+    "attempted": 20,
+    "success": 0,
+    "successRatePct": 0
+  },
+  "sampleFailures": [
+    {
+      "ok": false,
+      "userIndex": 1,
+      "iteration": 1,
+      "status": "cookie-check-failed",
+      "reason": "host-not-found",
+      "details": {
+        "available": ""
+      },
+      "finalUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com/",
+      "durationMs": 2070
+    },
+    {
+      "ok": false,
+      "userIndex": 2,
+      "iteration": 1,
+      "status": "cookie-check-failed",
+      "reason": "host-not-found",
+      "details": {
+        "available": ""
+      },
+      "finalUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com/",
+      "durationMs": 1924
+    },
+    {
+      "ok": false,
+      "userIndex": 3,
+      "iteration": 1,
+      "status": "cookie-check-failed",
+      "reason": "host-not-found",
+      "details": {
+        "available": ""
+      },
+      "finalUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com/",
+      "durationMs": 2049
+    },
+    {
+      "ok": false,
+      "userIndex": 4,
+      "iteration": 1,
+      "status": "cookie-check-failed",
+      "reason": "host-not-found",
+      "details": {
+        "available": ""
+      },
+      "finalUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com/",
+      "durationMs": 2165
+    },
+    {
+      "ok": false,
+      "userIndex": 5,
+      "iteration": 1,
+      "status": "cookie-check-failed",
+      "reason": "host-not-found",
+      "details": {
+        "available": ""
+      },
+      "finalUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com/",
+      "durationMs": 2034
+    },
+    {
+      "ok": false,
+      "userIndex": 6,
+      "iteration": 1,
+      "status": "cookie-check-failed",
+      "reason": "host-not-found",
+      "details": {
+        "available": ""
+      },
+      "finalUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com/",
+      "durationMs": 1985
+    },
+    {
+      "ok": false,
+      "userIndex": 7,
+      "iteration": 1,
+      "status": "cookie-check-failed",
+      "reason": "host-not-found",
+      "details": {
+        "available": ""
+      },
+      "finalUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com/",
+      "durationMs": 1997
+    },
+    {
+      "ok": false,
+      "userIndex": 8,
+      "iteration": 1,
+      "status": "cookie-check-failed",
+      "reason": "host-not-found",
+      "details": {
+        "available": ""
+      },
+      "finalUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com/",
+      "durationMs": 2018
+    },
+    {
+      "ok": false,
+      "userIndex": 9,
+      "iteration": 1,
+      "status": "cookie-check-failed",
+      "reason": "host-not-found",
+      "details": {
+        "available": ""
+      },
+      "finalUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com/",
+      "durationMs": 1926
+    },
+    {
+      "ok": false,
+      "userIndex": 10,
+      "iteration": 1,
+      "status": "cookie-check-failed",
+      "reason": "host-not-found",
+      "details": {
+        "available": ""
+      },
+      "finalUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com/",
+      "durationMs": 1964
+    }
+  ],
+  "passCriteria": {
+    "passed": false,
+    "checks": [
+      {
+        "name": "consent_verify_success_rate",
+        "expected": ">= 100",
+        "actual": 0,
+        "passed": false
+      },
+      {
+        "name": "max_error_rate_pct",
+        "expected": "<= 10",
+        "actual": 100,
+        "passed": false
+      }
+    ]
+  }
+}

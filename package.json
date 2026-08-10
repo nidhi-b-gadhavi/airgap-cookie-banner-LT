@@ -22,7 +22,17 @@
     "airgap:20": "set COOKIE_ACTION=script_loaded&& set AIRGAP_SCRIPT_MATCH=airgap.js&& set CONCURRENCY=20&& set ITERATIONS=1&& set HEADLESS=true&& set CONTEXT_MODE=shared&& set PREFLIGHT_ENABLED=true&& set PREFLIGHT_STRICT=true&& node .\\playwright-load\\airgap.js",
     "airgap:20:stable": "set COOKIE_ACTION=script_loaded&& set AIRGAP_SCRIPT_MATCH=airgap.js&& set CONCURRENCY=20&& set ITERATIONS=1&& set HEADLESS=true&& set CONTEXT_MODE=shared&& set BATCH_SIZE=2&& set BATCH_DELAY_MS=1200&& set PREFLIGHT_ENABLED=true&& set PREFLIGHT_STRICT=true&& node .\\playwright-load\\airgap.js",
     "airgap:visible:100": "set COOKIE_ACTION=visible&& set CONCURRENCY=100&& node .\\playwright-load\\airgap.js",
-    "airgap:visible:500": "set COOKIE_ACTION=visible&& set CONCURRENCY=500&& node .\\playwright-load\\airgap.js"
+    "airgap:visible:500": "set COOKIE_ACTION=visible&& set CONCURRENCY=500&& node .\\playwright-load\\airgap.js",
+    "k6:airgap": "k6 run .\\playwright-load\\k6-airgap-browser.mjs",
+    "k6:airgap:20": "set CONCURRENCY=20&& set DURATION=2m&& set COOKIE_ACTION=script_loaded&& k6 run .\\playwright-load\\k6-airgap-browser.mjs",
+    "k6:consent:accept:20": "set BASE_URL=%BASE_URL%&& set COOKIE_ACTION=accept&& set TARGET_VUS=20&& set RAMP_DURATION=30s&& set HOLD_DURATION=60s&& k6 run .\\k6\\consent-verify.js",
+    "k6:consent:accept:50": "set BASE_URL=%BASE_URL%&& set COOKIE_ACTION=accept&& set TARGET_VUS=50&& set RAMP_DURATION=60s&& set HOLD_DURATION=120s&& k6 run .\\k6\\consent-verify.js",
+    "k6:consent:accept:100": "set BASE_URL=%BASE_URL%&& set COOKIE_ACTION=accept&& set TARGET_VUS=100&& set RAMP_DURATION=90s&& set HOLD_DURATION=180s&& k6 run .\\k6\\consent-verify.js",
+    "k6:consent:reject:20": "set BASE_URL=%BASE_URL%&& set COOKIE_ACTION=reject&& set TARGET_VUS=20&& set RAMP_DURATION=30s&& set HOLD_DURATION=60s&& k6 run .\\k6\\consent-verify.js",
+    "k6:consent:more:20": "set BASE_URL=%BASE_URL%&& set COOKIE_ACTION=more_choices&& set TARGET_VUS=20&& set RAMP_DURATION=30s&& set HOLD_DURATION=60s&& k6 run .\\k6\\consent-verify.js",
+    "k6:consent:more:50": "set BASE_URL=%BASE_URL%&& set COOKIE_ACTION=more_choices&& set TARGET_VUS=50&& set RAMP_DURATION=60s&& set HOLD_DURATION=120s&& k6 run .\\k6\\consent-verify.js",
+    "k6:url:100": "set BASE_URL=%BASE_URL%&& set TARGET_VUS=100&& k6 run .\\k6\\url-load.js",
+    "k6:url:200": "set BASE_URL=%BASE_URL%&& set TARGET_VUS=200&& k6 run .\\k6\\url-load.js"
   },
   "keywords": [],
   "author": "",

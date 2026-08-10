@@ -16,6 +16,10 @@ const HEADLESS = (process.env.HEADLESS || 'true').trim().toLowerCase() !== 'fals
 const VISIBILITY_PASS_MIN_PCT = toPositiveInt(process.env.VISIBILITY_PASS_MIN_PCT, 95);
 const PRESENCE_PASS_MIN_PCT = toPositiveInt(process.env.PRESENCE_PASS_MIN_PCT, 100);
 const CONTENT_PASS_MIN_PCT = toPositiveInt(process.env.CONTENT_PASS_MIN_PCT, 100);
+const VERIFY_PASS_MIN_PCT = toPositiveInt(process.env.VERIFY_PASS_MIN_PCT, 100);
+const CONSENT_COOKIE_KEY = (process.env.CONSENT_COOKIE_KEY || 'tcm').trim();
+const CONSENT_LOCALSTORAGE_KEY = (process.env.CONSENT_LOCALSTORAGE_KEY || 'tcmConsent').trim();
+const CONSENT_CLICK_WAIT_MS = toPositiveInt(process.env.CONSENT_CLICK_WAIT_MS, 2000);
 const MAX_ERROR_RATE_PCT = Number(process.env.MAX_ERROR_RATE_PCT || 5);
 const CONTEXT_MODE = (process.env.CONTEXT_MODE || 'shared').trim().toLowerCase();
 const PREFLIGHT_ENABLED = (process.env.PREFLIGHT_ENABLED || 'true').trim().toLowerCase() !== 'false';
@@ -414,6 +418,101 @@ async function checkCookieBannerContent(page) {
   return { ok: false, details: lastResult.details };
 }
 
+// Clicks Accept/Reject inside closed shadow DOM then verifies tcm cookie and tcmConsent localStorage.
+async function clickAndVerifyConsent(page, action) {
+  // Clear existing consent state so Transcend always shows the banner fresh.
+  await page.evaluate(({ cookieKey, storageKey }) => {
+    document.cookie = `${cookieKey}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=.lilly.com`;
+    document.cookie = `${cookieKey}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
+    localStorage.removeItem(storageKey);
+  }, { cookieKey: CONSENT_COOKIE_KEY, storageKey: CONSENT_LOCALSTORAGE_KEY });
+
+  await page.reload({ waitUntil: 'domcontentloaded' });
+
+  // Wait for consent host to attach after reload — Transcend loads asynchronously.
+  const hostAttached = await page
+    .waitForSelector('#transcend-consent-manager', { state: 'attached', timeout: 20000 })
+    .then(() => true)
+    .catch(() => false);
+
+  if (!hostAttached) {
+    return { attempted: true, success: false, reason: 'host-not-found-after-reload', details: {} };
+  }
+
+  // Give shadow DOM time to render buttons after host attaches.
+  await sleepMs(1500);
+
+  const clicked = await page.evaluate((actionType) => {
+    const host = document.querySelector('#transcend-consent-manager');
+    if (!host || !host.shadowRoot) return { ok: false, reason: 'host-not-found' };
+    const buttons = Array.from(host.shadowRoot.querySelectorAll('button'));
+
+    if (actionType === 'more') {
+      const moreBtn = buttons.find((b) => /more choices/i.test(b.textContent || ''));
+      if (!moreBtn) return { ok: false, reason: 'more-choices-button-not-found', available: buttons.map((b) => (b.textContent || '').trim()).join(', ') };
+      moreBtn.click();
+      return { ok: true, reason: 'more-opened' };
+    }
+
+    const target = actionType === 'accept'
+      ? buttons.find((b) => /accept all/i.test(b.textContent || ''))
+      : buttons.find((b) => /reject all/i.test(b.textContent || ''));
+    if (!target) {
+      return { ok: false, reason: `button-not-found:${actionType}`, available: buttons.map((b) => (b.textContent || '').trim()).join(', ') };
+    }
+    target.click();
+    return { ok: true, reason: 'clicked' };
+  }, action);
+
+  if (!clicked.ok) {
+    return { attempted: true, success: false, reason: clicked.reason, details: { available: clicked.available || '' } };
+  }
+
+  // For more choices: wait for dialog then click the Save/Confirm button.
+  if (action === 'more') {
+    await sleepMs(2000);
+    const confirmed = await page.evaluate(() => {
+      const host = document.querySelector('#transcend-consent-manager');
+      if (!host || !host.shadowRoot) return { ok: false, reason: 'host-not-found-for-dialog' };
+      const allButtons = Array.from(host.shadowRoot.querySelectorAll('button'));
+      const saveBtn = allButtons.find((b) => /save|confirm|done|submit/i.test(b.textContent || ''));
+      if (!saveBtn) return { ok: false, reason: 'save-button-not-found', available: allButtons.map((b) => (b.textContent || '').trim()).join(', ') };
+      saveBtn.click();
+      return { ok: true };
+    });
+    if (!confirmed.ok) {
+      return { attempted: true, success: false, reason: confirmed.reason, details: { available: confirmed.available || '' } };
+    }
+  }
+
+  await sleepMs(CONSENT_CLICK_WAIT_MS);
+
+  const verification = await page.evaluate(({ cookieKey, storageKey }) => {
+    const cookies = document.cookie || '';
+    const hasCookie = cookies.split(';').some((c) => c.trim().startsWith(cookieKey + '='));
+    const match = cookies.split(';').find((c) => c.trim().startsWith(cookieKey + '='));
+    const cookieValue = match ? decodeURIComponent(match.trim().slice(cookieKey.length + 1)).slice(0, 500) : null;
+    const storageRaw = localStorage.getItem(storageKey);
+    return { hasCookie, cookieValue, hasLocalStorage: Boolean(storageRaw), localStorageValue: storageRaw ? storageRaw.slice(0, 500) : null };
+  }, { cookieKey: CONSENT_COOKIE_KEY, storageKey: CONSENT_LOCALSTORAGE_KEY });
+
+  const ok = verification.hasCookie && verification.hasLocalStorage;
+  return {
+    attempted: true,
+    success: ok,
+    reason: ok ? `${action}-verified` : `${action}-verification-failed`,
+    details: {
+      action,
+      hasCookie: verification.hasCookie,
+      cookieKey: CONSENT_COOKIE_KEY,
+      cookieValue: verification.cookieValue,
+      hasLocalStorage: verification.hasLocalStorage,
+      localStorageKey: CONSENT_LOCALSTORAGE_KEY,
+      localStorageValue: verification.localStorageValue,
+    },
+  };
+}
+
 async function applyCookieAction(page) {
   try {
     if (COOKIE_ACTION === 'script_loaded') {
@@ -442,6 +541,11 @@ async function applyCookieAction(page) {
         reason: contentResult.ok ? 'banner-content-matched' : 'banner-content-mismatch',
         details: contentResult.details,
       };
+    }
+
+    if (COOKIE_ACTION === 'accept_verify' || COOKIE_ACTION === 'reject_verify' || COOKIE_ACTION === 'more_verify') {
+      const action = COOKIE_ACTION === 'accept_verify' ? 'accept' : COOKIE_ACTION === 'reject_verify' ? 'reject' : 'more';
+      return await clickAndVerifyConsent(page, action);
     }
 
     const banner = page.locator(COOKIE_BANNER_SELECTOR).first();
@@ -584,7 +688,10 @@ async function runUser(browser, userIndex, sharedContext) {
         COOKIE_ACTION !== 'visible' &&
         COOKIE_ACTION !== 'script_loaded' &&
         COOKIE_ACTION !== 'present' &&
-        COOKIE_ACTION !== 'content_check'
+        COOKIE_ACTION !== 'content_check' &&
+        COOKIE_ACTION !== 'accept_verify' &&
+        COOKIE_ACTION !== 'reject_verify' &&
+        COOKIE_ACTION !== 'more_verify'
       ) {
         const finalStart = Date.now();
         await page.goto(BASE_URL, { waitUntil: 'load', timeout: NAV_TIMEOUT_MS });
@@ -793,6 +900,14 @@ async function main() {
         expected: `>= ${CONTENT_PASS_MIN_PCT}`,
         actual: summary.cookieBanner.successRatePct,
         passed: summary.cookieBanner.successRatePct >= CONTENT_PASS_MIN_PCT,
+      });
+    }
+    if (COOKIE_ACTION === 'accept_verify' || COOKIE_ACTION === 'reject_verify' || COOKIE_ACTION === 'more_verify') {
+      checks.push({
+        name: 'consent_verify_success_rate',
+        expected: `>= ${VERIFY_PASS_MIN_PCT}`,
+        actual: summary.cookieBanner.successRatePct,
+        passed: summary.cookieBanner.successRatePct >= VERIFY_PASS_MIN_PCT,
       });
     }
     checks.push({

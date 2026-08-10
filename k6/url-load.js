@@ -1,0 +1,57 @@
+import http from 'k6/http';
+import { check, sleep } from 'k6';
+import { Trend, Counter, Rate } from 'k6/metrics';
+
+const BASE_URL = __ENV.BASE_URL || '';
+const TIMEOUT_MS = Number(__ENV.TIMEOUT_MS || '30000');
+const THINK_TIME_S = Number(__ENV.THINK_TIME_S || '1');
+
+const pageLoadDuration = new Trend('page_load_duration_ms', true);
+const successCount = new Counter('success_count');
+const failCount = new Counter('fail_count');
+const successRate = new Rate('success_rate');
+
+export const options = {
+  scenarios: {
+    url_load: {
+      executor: 'ramping-vus',
+      stages: [
+        { duration: __ENV.RAMP_DURATION || '30s', target: Number(__ENV.TARGET_VUS || '100') },
+        { duration: __ENV.HOLD_DURATION || '60s', target: Number(__ENV.TARGET_VUS || '100') },
+        { duration: __ENV.COOLDOWN_DURATION || '15s', target: 0 },
+      ],
+    },
+  },
+  thresholds: {
+    success_rate: [`rate>=${Number(__ENV.PASS_RATE || '0.95')}`],
+    page_load_duration_ms: [`p(95)<${Number(__ENV.P95_MS || '3000')}`],
+    http_req_failed: [`rate<${Number(__ENV.MAX_ERROR_RATE || '0.05')}`],
+  },
+};
+
+export default function () {
+  const start = Date.now();
+  const res = http.get(BASE_URL, {
+    timeout: `${TIMEOUT_MS}ms`,
+    headers: { 'User-Agent': 'k6-load-test' },
+  });
+
+  const duration = Date.now() - start;
+  pageLoadDuration.add(duration);
+
+  const ok = res.status >= 200 && res.status < 400;
+  successRate.add(ok);
+
+  if (ok) {
+    successCount.add(1);
+  } else {
+    failCount.add(1);
+  }
+
+  check(res, {
+    'status is 2xx or 3xx': (r) => r.status >= 200 && r.status < 400,
+    'response time < p95 threshold': () => duration < Number(__ENV.P95_MS || '3000'),
+  });
+
+  sleep(THINK_TIME_S);
+}

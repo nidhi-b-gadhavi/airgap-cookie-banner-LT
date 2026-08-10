@@ -16,36 +16,36 @@
     "successCount": 1,
     "failureCount": 0,
     "errorRatePct": 0,
-    "totalDurationMs": 5610,
-    "throughputRps": 0.18
+    "totalDurationMs": 4965,
+    "throughputRps": 0.2
   },
   "latencyMs": {
     "endToEnd": {
       "count": 1,
-      "minMs": 3051,
-      "p50Ms": 3051,
-      "p95Ms": 3051,
-      "p99Ms": 3051,
-      "maxMs": 3051,
-      "avgMs": 3051
+      "minMs": 2836,
+      "p50Ms": 2836,
+      "p95Ms": 2836,
+      "p99Ms": 2836,
+      "maxMs": 2836,
+      "avgMs": 2836
     },
     "initialNavigation": {
       "count": 1,
-      "minMs": 395,
-      "p50Ms": 395,
-      "p95Ms": 395,
-      "p99Ms": 395,
-      "maxMs": 395,
-      "avgMs": 395
+      "minMs": 361,
+      "p50Ms": 361,
+      "p95Ms": 361,
+      "p99Ms": 361,
+      "maxMs": 361,
+      "avgMs": 361
     },
     "cookieAction": {
       "count": 1,
-      "minMs": 1628,
-      "p50Ms": 1628,
-      "p95Ms": 1628,
-      "p99Ms": 1628,
-      "maxMs": 1628,
-      "avgMs": 1628
+      "minMs": 1634,
+      "p50Ms": 1634,
+      "p95Ms": 1634,
+      "p99Ms": 1634,
+      "maxMs": 1634,
+      "avgMs": 1634
     },
     "finalPageLoad": {
       "count": 0,

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Auth and Cloudflare Handling – Load Test Reference</title>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; color: #222; line-height: 1.6; }
+  h1 { color: #1a3a6b; border-bottom: 2px solid #1a3a6b; padding-bottom: 8px; }
+  h2 { color: #1a3a6b; margin-top: 36px; }
+  h3 { color: #333; margin-top: 24px; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+  th { background: #1a3a6b; color: #fff; padding: 10px 14px; text-align: left; }
+  td { padding: 9px 14px; border-bottom: 1px solid #ddd; vertical-align: top; }
+  tr:nth-child(even) td { background: #f5f7fa; }
+  code { background: #eef; padding: 2px 6px; border-radius: 3px; font-size: 0.92em; font-family: Consolas, monospace; }
+  pre { background: #f4f4f4; border-left: 4px solid #1a3a6b; padding: 14px 18px; overflow-x: auto; font-size: 0.88em; }
+  .pass { color: #2e7d32; font-weight: bold; }
+  .fail { color: #c62828; font-weight: bold; }
+  .note { background: #fff8e1; border-left: 4px solid #f9a825; padding: 10px 16px; margin: 16px 0; }
+  @media print { body { margin: 20px; } }
+</style>
+</head>
+<body>
+
+<h1>Auth and Cloudflare Handling – Load Test Reference</h1>
+<p><strong>Project:</strong> Pharmacy Patient Portal – Consent Load Testing<br/>
+<strong>Environment:</strong> DEV – <code>pharmacy-patient-portal.dev.apps.lilly.com</code><br/>
+<strong>Date:</strong> 2026-08-10</p>
+
+<hr/>
+
+<h2>1. Authentication Flow (Microsoft SSO)</h2>
+
+<h3>1.1 How Auth Works</h3>
+<p>The application uses Microsoft Azure AD (AAD) SSO with an OAuth2 proxy layer. The session is maintained via a <code>_oauth2_proxy</code> cookie on the application domain.</p>
+
+<h3>1.2 Bootstrap Process</h3>
+<table>
+  <tr><th>Step</th><th>What Happens</th></tr>
+  <tr><td>1</td><td>Run <code>npm run auth:bootstrap</code> from project root</td></tr>
+  <tr><td>2</td><td>Real Chromium browser opens and navigates to the app URL</td></tr>
+  <tr><td>3</td><td>You complete Microsoft SSO login manually (including MFA if required)</td></tr>
+  <tr><td>4</td><td>Playwright waits for the post-login redirect back to the app</td></tr>
+  <tr><td>5</td><td>All session cookies are saved to <code>playwright-load/auth-state-ms.json</code></td></tr>
+</table>
+
+<h3>1.3 Session Reuse in Tests</h3>
+<table>
+  <tr><th>Tool</th><th>How Auth State Is Used</th></tr>
+  <tr><td>Playwright</td><td><code>browser.newContext({ storageState: AUTH_STATE_PATH })</code> — context starts pre-authenticated</td></tr>
+  <tr><td>k6 browser</td><td><code>open(AUTH_STATE_PATH)</code> at init time, <code>context.addCookies(AUTH_COOKIES)</code> before navigation</td></tr>
+</table>
+
+<h3>1.4 Key Auth Cookies</h3>
+<table>
+  <tr><th>Cookie Name</th><th>Domain</th><th>Purpose</th></tr>
+  <tr><td><code>_oauth2_proxy</code></td><td>pharmacy-patient-portal.dev.apps.lilly.com</td><td>Main app session — required for all authenticated page loads</td></tr>
+  <tr><td><code>ESTSAUTHPERSISTENT</code></td><td>.login.microsoftonline.com</td><td>Microsoft persistent SSO token</td></tr>
+  <tr><td><code>ESTSAUTH</code></td><td>.login.microsoftonline.com</td><td>Microsoft session token</td></tr>
+  <tr><td><code>esctx-*</code></td><td>.login.microsoftonline.com</td><td>Extended SSO context cookies</td></tr>
+</table>
+
+<h3>1.5 Session Expiry</h3>
+<table>
+  <tr><th>Scenario</th><th>Symptom</th><th>Fix</th></tr>
+  <tr><td>AAD token expired</td><td>Tests return 403 or redirect to <code>login.microsoftonline.com</code></td><td>Re-run <code>npm run auth:bootstrap</code></td></tr>
+  <tr><td>k6 shows <code>no SSO redirect</code> check failing</td><td>All VUs fail at first page load</td><td>Re-run <code>npm run auth:bootstrap</code></td></tr>
+  <tr><td>Playwright shows <code>not-authenticated</code> in sampleFailures</td><td>Auth state stale</td><td>Re-run <code>npm run auth:bootstrap</code></td></tr>
+</table>
+
+<div class="note">
+  <strong>Note:</strong> Microsoft AAD session tokens typically last 8–24 hours depending on tenant policy. Always re-run <code>npm run auth:bootstrap</code> at the start of each test day.
+</div>
+
+<hr/>
+
+<h2>2. Cloudflare Bot Protection Bypass</h2>
+
+<h3>2.1 How Cloudflare Is Handled</h3>
+<p>Cloudflare bot protection is bypassed automatically because both Playwright and k6 browser use <strong>real Chromium instances</strong>, not HTTP API calls.</p>
+
+<table>
+  <tr><th>Cloudflare Check</th><th>How It Is Bypassed</th></tr>
+  <tr><td>JavaScript challenge</td><td>Real browser executes the challenge automatically</td></tr>
+  <tr><td>Browser fingerprint</td><td>Real Chromium matches expected browser fingerprint</td></tr>
+  <tr><td>TLS fingerprint (JA3)</td><td>Real Chromium TLS matches expected client hello signature</td></tr>
+  <tr><td>Cookie validation (<code>__cf_bm</code>)</td><td>Captured during <code>auth:bootstrap</code> and injected with auth cookies</td></tr>
+  <tr><td>Mouse/interaction patterns</td><td>Not checked for page loads; only checked for form submissions</td></tr>
+</table>
+
+<h3>2.2 Cloudflare Cookies in Auth State</h3>
+<table>
+  <tr><th>Cookie Name</th><th>Domain</th><th>Rotation Interval</th></tr>
+  <tr><td><code>__cf_bm</code></td><td>.dev.apps.lilly.com</td><td>Every 30 minutes</td></tr>
+  <tr><td><code>__cf_bm</code></td><td>.dev.fdl.lilly.com</td><td>Every 30 minutes</td></tr>
+  <tr><td><code>__cf_bm</code></td><td>.dev.unex.lilly.com</td><td>Every 30 minutes</td></tr>
+</table>
+
+<div class="note">
+  <strong>Important:</strong> The <code>__cf_bm</code> cookie rotates every 30 minutes. VUs that started before rotation continue to work. New VUs starting after rotation may get challenged. For long-running tests (&gt;30 minutes), some VUs may see Cloudflare challenges — real browsers handle these automatically.
+</div>
+
+<hr/>
+
+<h2>3. Consent Banner Handling</h2>
+
+<h3>3.1 Why Special Handling Is Required</h3>
+<p>The Transcend consent manager uses a <strong>closed Shadow DOM</strong> (<code>mode: "closed"</code>). This means:</p>
+<ul>
+  <li><code>element.shadowRoot</code> returns <code>null</code> from external JavaScript</li>
+  <li>Standard CSS selectors cannot pierce into the shadow DOM</li>
+  <li>k6 browser cannot click buttons inside it via normal DOM interaction</li>
+</ul>
+
+<h3>3.2 Solution Per Tool</h3>
+<table>
+  <tr><th>Tool</th><th>Approach</th><th>How It Works</th></tr>
+  <tr><td>Playwright</td><td>Shadow DOM wait + evaluate</td><td><code>waitForSelector</code> waits for host to attach, then clears consent cookies, reloads, and clicks Accept/Reject inside shadow DOM via <code>page.evaluate()</code></td></tr>
+  <tr><td>k6 browser</td><td>Direct storage write</td><td>Clears existing <code>tcm</code> cookie and <code>tcmConsent</code> localStorage, writes the correct consent payload directly, then verifies both are readable — bypasses shadow DOM entirely</td></tr>
+</table>
+
+<h3>3.3 Consent Payload Written by k6</h3>
+<pre>Accept All:
+{
+  "purposes": {
+    "Functional": true, "Analytics": true, "Advertising": true,
+    "ProgramTcpaTpo": "Auto", "EnterpriseHipaaAuthorization": "Auto",
+    "EnterpriseMarketing": "Auto", "EnterpriseMarketResearch": "Auto",
+    "EnterpriseMedicalResearch": "Auto", "EmailCommunicationPreference": "Auto",
+    "ProgramTcpaMarketing": "Auto", "SaleOfInfo": "Auto"
+  },
+  "confirmed": true, "prompted": true, "updated": true
+}
+
+Reject All:
+{ same structure but "Analytics": false, "Advertising": false }</pre>
+
+<hr/>
+
+<h2>4. Concurrency Limits and Scaling</h2>
+
+<table>
+  <tr><th>Users</th><th>Tool</th><th>RAM Required</th><th>Status</th></tr>
+  <tr><td>1–20</td><td>Playwright</td><td>~3 GB</td><td class="pass">Confirmed working</td></tr>
+  <tr><td>1–20</td><td>k6 browser</td><td>~3 GB</td><td class="pass">Confirmed working</td></tr>
+  <tr><td>50</td><td>k6 browser</td><td>~7–8 GB</td><td>Requires 16 GB+ RAM machine</td></tr>
+  <tr><td>100</td><td>k6 browser</td><td>~15 GB</td><td class="fail">Not feasible on single machine</td></tr>
+  <tr><td>200+</td><td>k6 HTTP</td><td>Very low</td><td class="pass">Works (no browser, no DOM verification)</td></tr>
+  <tr><td>200+</td><td>Distributed k6</td><td>Distributed across machines</td><td>Requires multiple machines or CI agents</td></tr>
+</table>
+
+<hr/>
+
+<h2>5. Troubleshooting Quick Reference</h2>
+
+<table>
+  <tr><th>Error</th><th>Cause</th><th>Fix</th></tr>
+  <tr><td><code>not-authenticated</code> in Playwright failures</td><td>Auth state expired</td><td><code>npm run auth:bootstrap</code></td></tr>
+  <tr><td><code>no SSO redirect</code> failing in k6</td><td>Auth cookies expired or path wrong</td><td><code>npm run auth:bootstrap</code></td></tr>
+  <tr><td><code>host-not-found</code> in k6</td><td>Shadow DOM closed — fixed by direct storage write</td><td>Current k6 script handles this automatically</td></tr>
+  <tr><td><code>Access is denied CrashpadMetrics</code></td><td>Windows file lock on Chromium temp dir — harmless</td><td>Add <code>2>nul</code> to CMD command</td></tr>
+  <tr><td><code>process unexpectedly ended exit status 1</code></td><td>Corporate security or <code>--disable-gpu</code> issue</td><td>Removed <code>--disable-gpu</code> from k6 browser args</td></tr>
+  <tr><td>403 on page load</td><td>Auth state expired or WAF rate limit</td><td>Re-run bootstrap; reduce concurrency if WAF</td></tr>
+  <tr><td><code>interrupted iterations</code> at test end</td><td>Normal — VUs mid-iteration when test duration ended</td><td>Not an error; check <code>consent_success_rate</code> threshold</td></tr>
+</table>
+
+<hr/>
+
+<p style="font-size:0.85em;color:#888;">To export as PDF: Open this file in Chrome or Edge → File → Print → Save as PDF</p>
+
+</body>
+</html>
