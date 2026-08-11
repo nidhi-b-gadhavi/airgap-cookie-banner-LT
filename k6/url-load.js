@@ -5,6 +5,22 @@ import { Trend, Counter, Rate } from 'k6/metrics';
 const BASE_URL = __ENV.BASE_URL || '';
 const TIMEOUT_MS = Number(__ENV.TIMEOUT_MS || '30000');
 const THINK_TIME_S = Number(__ENV.THINK_TIME_S || '1');
+const AUTH_STATE_PATH = __ENV.AUTH_STATE_PATH || '../playwright-load/auth-state-ms.json';
+
+// read auth cookies once in init context; filter to cookies whose domain matches BASE_URL
+const _authCookieHeader = (function () {
+  try {
+    const raw = open(AUTH_STATE_PATH);
+    const state = JSON.parse(raw);
+    const cookies = (state.cookies || []).filter((c) => {
+      const domain = (c.domain || '').replace(/^\./, '');
+      return BASE_URL.includes(domain);
+    });
+    return cookies.map((c) => `${c.name}=${c.value}`).join('; ');
+  } catch (_) {
+    return '';
+  }
+})();
 
 const pageLoadDuration = new Trend('page_load_duration_ms', true);
 const successCount = new Counter('success_count');
@@ -29,11 +45,18 @@ export const options = {
   },
 };
 
+// log first failure per VU to expose actual status code / error without flooding output
+let _firstFailLogged = false;
+
 export default function () {
   const start = Date.now();
+  const headers = { 'User-Agent': 'k6-load-test' };
+  if (_authCookieHeader) headers['Cookie'] = _authCookieHeader;
+
   const res = http.get(BASE_URL, {
     timeout: `${TIMEOUT_MS}ms`,
-    headers: { 'User-Agent': 'k6-load-test' },
+    redirects: 10,
+    headers,
   });
 
   const duration = Date.now() - start;
@@ -46,6 +69,10 @@ export default function () {
     successCount.add(1);
   } else {
     failCount.add(1);
+    if (!_firstFailLogged) {
+      _firstFailLogged = true;
+      console.error(`[VU${__VU}] FAIL status=${res.status} error="${res.error}" url=${BASE_URL}`);
+    }
   }
 
   check(res, {

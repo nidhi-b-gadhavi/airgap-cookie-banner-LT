@@ -599,7 +599,7 @@ async function navigateAndWaitForAuthReturn(page) {
   if (!isMicrosoftLoginUrl(page.url())) {
     return initialResponse;
   }
-
+          
   // Some SSO flows briefly land on Microsoft domains before redirecting back.
   // Wait for return to app URL before declaring authentication failure.
   await page

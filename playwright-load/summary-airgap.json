@@ -4,48 +4,48 @@
   "concurrency": 1,
   "iterationsPerUser": 1,
   "execution": {
-    "batchSize": 2,
-    "batchDelayMs": 1200,
+    "batchSize": 20,
+    "batchDelayMs": 2000,
     "headless": false,
     "contextMode": "shared"
   },
   "authStatePath": "C:\\Users\\L135061\\codebase\\LDPCE\\test-cases\\load-test-cases-separated\\playwright-load\\auth-state-ms.json",
-  "cookieAction": "content_check",
+  "cookieAction": "script_loaded",
   "totals": {
     "requests": 1,
     "successCount": 1,
     "failureCount": 0,
     "errorRatePct": 0,
-    "totalDurationMs": 4484,
-    "throughputRps": 0.22
+    "totalDurationMs": 3104,
+    "throughputRps": 0.32
   },
   "latencyMs": {
     "endToEnd": {
       "count": 1,
-      "minMs": 2099,
-      "p50Ms": 2099,
-      "p95Ms": 2099,
-      "p99Ms": 2099,
-      "maxMs": 2099,
-      "avgMs": 2099
+      "minMs": 781,
+      "p50Ms": 781,
+      "p95Ms": 781,
+      "p99Ms": 781,
+      "maxMs": 781,
+      "avgMs": 781
     },
     "initialNavigation": {
       "count": 1,
-      "minMs": 299,
-      "p50Ms": 299,
-      "p95Ms": 299,
-      "p99Ms": 299,
-      "maxMs": 299,
-      "avgMs": 299
+      "minMs": 327,
+      "p50Ms": 327,
+      "p95Ms": 327,
+      "p99Ms": 327,
+      "maxMs": 327,
+      "avgMs": 327
     },
     "cookieAction": {
       "count": 1,
-      "minMs": 1607,
-      "p50Ms": 1607,
-      "p95Ms": 1607,
-      "p99Ms": 1607,
-      "maxMs": 1607,
-      "avgMs": 1607
+      "minMs": 77,
+      "p50Ms": 77,
+      "p95Ms": 77,
+      "p99Ms": 77,
+      "maxMs": 77,
+      "avgMs": 77
     },
     "finalPageLoad": {
       "count": 0,
@@ -66,12 +66,6 @@
   "passCriteria": {
     "passed": true,
     "checks": [
-      {
-        "name": "cookie_content_success_rate",
-        "expected": ">= 100",
-        "actual": 100,
-        "passed": true
-      },
       {
         "name": "max_error_rate_pct",
         "expected": "<= 10",

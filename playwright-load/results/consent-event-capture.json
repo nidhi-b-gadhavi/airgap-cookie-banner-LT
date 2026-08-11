@@ -1,13 +1,13 @@
 {
   "scenario": "consent-event-capture",
-  "baseUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com",
-  "capturedAt": "2026-08-10T12:28:08.311Z",
+  "baseUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com/",
+  "capturedAt": "2026-08-11T10:07:31.691Z",
   "finalUrl": "https://pharmacy-patient-portal.dev.apps.lilly.com/",
   "capture": {
-    "startedAt": "2026-08-10T12:27:53.489Z",
+    "startedAt": "2026-08-11T10:07:21.228Z",
     "events": [
       {
-        "ts": 1786364876999,
+        "ts": 1786442844828,
         "type": "click",
         "isTrusted": true,
         "target": {
@@ -56,56 +56,7 @@
         ]
       },
       {
-        "ts": 1786364878432,
-        "type": "click",
-        "isTrusted": true,
-        "target": {
-          "tag": "div",
-          "id": "transcend-consent-manager",
-          "className": "",
-          "role": null,
-          "text": ""
-        },
-        "activeElement": {
-          "tag": "body",
-          "id": "",
-          "className": "",
-          "role": null,
-          "text": "Public Landing Page Placeholder Have a Rx? Get started Sign in to LillyDirect </> Conditions Alzheimers Disease Autoimmune Cancer Dermatology Diabetes Migraine "
-        },
-        "path": [
-          {
-            "tag": "div",
-            "id": "transcend-consent-manager",
-            "className": "",
-            "role": null,
-            "text": ""
-          },
-          {
-            "tag": "html",
-            "id": "",
-            "className": "",
-            "role": null,
-            "text": "Public Landing Page Placeholder Have a Rx? Get started Sign in to LillyDirect </> Conditions Alzheimers Disease Autoimmune Cancer Dermatology Diabetes Migraine "
-          },
-          {
-            "tag": "#document",
-            "id": "",
-            "className": "",
-            "role": null,
-            "text": ""
-          },
-          {
-            "tag": "",
-            "id": "",
-            "className": "",
-            "role": null,
-            "text": ""
-          }
-        ]
-      },
-      {
-        "ts": 1786364879628,
+        "ts": 1786442846039,
         "type": "click",
         "isTrusted": true,
         "target": {
@@ -154,7 +105,7 @@
         ]
       },
       {
-        "ts": 1786364879629,
+        "ts": 1786442846039,
         "type": "input",
         "isTrusted": true,
         "target": {
@@ -203,7 +154,7 @@
         ]
       },
       {
-        "ts": 1786364881127,
+        "ts": 1786442846901,
         "type": "click",
         "isTrusted": true,
         "target": {
@@ -252,7 +203,7 @@
         ]
       },
       {
-        "ts": 1786364881127,
+        "ts": 1786442846901,
         "type": "input",
         "isTrusted": true,
         "target": {
@@ -301,7 +252,7 @@
         ]
       },
       {
-        "ts": 1786364882590,
+        "ts": 1786442847760,
         "type": "click",
         "isTrusted": true,
         "target": {
@@ -352,21 +303,21 @@
     ],
     "logs": [
       {
-        "ts": 1786364873629,
+        "ts": 1786442841360,
         "level": "log",
         "args": [
           "Bootstrap running"
         ]
       },
       {
-        "ts": 1786364873748,
+        "ts": 1786442841449,
         "level": "log",
         "args": [
           "[DataLayer] Initialized successfully"
         ]
       },
       {
-        "ts": 1786364874128,
+        "ts": 1786442841764,
         "level": "log",
         "args": [
           "[embed] beginAuthFlow — debugEnabled:",
@@ -374,28 +325,28 @@
         ]
       },
       {
-        "ts": 1786364874176,
+        "ts": 1786442841806,
         "level": "log",
         "args": [
           "starttime=undefined"
         ]
       },
       {
-        "ts": 1786364874176,
+        "ts": 1786442841806,
         "level": "log",
         "args": [
-          "date=Mon Aug 10 2026 17:57:54 GMT+0530 (India Standard Time)"
+          "date=Tue Aug 11 2026 15:37:21 GMT+0530 (India Standard Time)"
         ]
       },
       {
-        "ts": 1786364874176,
+        "ts": 1786442841806,
         "level": "log",
         "args": [
           "sess_secs=NaN"
         ]
       },
       {
-        "ts": 1786364874213,
+        "ts": 1786442841867,
         "level": "log",
         "args": [
           "[embed] beginAuthFlow — session response:",
@@ -403,7 +354,7 @@
         ]
       },
       {
-        "ts": 1786364874213,
+        "ts": 1786442841867,
         "level": "log",
         "args": [
           "[embed] beginAuthFlow — no auth needed, token:",
@@ -411,7 +362,7 @@
         ]
       },
       {
-        "ts": 1786364874213,
+        "ts": 1786442841867,
         "level": "log",
         "args": [
           "[embed] finish — token:",
@@ -424,7 +375,7 @@
       "localStorage": [
         {
           "key": "tcmConsent",
-          "value": "{\"purposes\":{\"ProgramTcpaTpo\":\"Auto\",\"EnterpriseHipaaAuthorization\":\"Auto\",\"EnterpriseMarketing\":\"Auto\",\"EnterpriseMarketResearch\":\"Auto\",\"EnterpriseMedicalResearch\":\"Auto\",\"EmailCommunicationPreference\":\"Auto\",\"ProgramTcpaMarketing\":\"Auto\",\"Functional\":true,\"Analytics\":true,\"Advertising\":false,\"SaleOfInfo\":\"Auto\"},\"timestamp\":\"2026-08-10T12:28:02.591Z\",\"confirmed\":true,\"prompted\":true,\"updated\":true}"
+          "value": "{\"purposes\":{\"ProgramTcpaTpo\":\"Auto\",\"EnterpriseHipaaAuthorization\":\"Auto\",\"EnterpriseMarketing\":\"Auto\",\"EnterpriseMarketResearch\":\"Auto\",\"EnterpriseMedicalResearch\":\"Auto\",\"EmailCommunicationPreference\":\"Auto\",\"ProgramTcpaMarketing\":\"Auto\",\"Functional\":true,\"Analytics\":true,\"Advertising\":false,\"SaleOfInfo\":\"Auto\"},\"timestamp\":\"2026-08-11T10:07:27.761Z\",\"confirmed\":true,\"prompted\":true,\"updated\":true}"
         },
         {
           "key": "tcmu",
@@ -441,12 +392,12 @@
           "value": "1"
         }
       ],
-      "documentCookie": "gtm.start=1786364796489; PageNumber=2; tcm={\"purposes\":{\"ProgramTcpaTpo\":\"Auto\",\"EnterpriseHipaaAuthorization\":\"Auto\",\"EnterpriseMarketing\":\"Auto\",\"EnterpriseMarketResearch\":\"Auto\",\"EnterpriseMedicalResearch\":\"Auto\",\"EmailCommunicationPreference\":\"Auto\",\"ProgramTcpaMarketing\":\"Auto\",\"Functional\":true,\"Analytics\":true,\"Advertising\":false,\"SaleOfInfo\":\"Auto\"},\"timestamp\":\"2026-08-10T12:28:02.591Z\",\"confirmed\":true,\"prompted\":true,\"updated\":true}",
+      "documentCookie": "gtm.start=1786442819182; PageNumber=2; tcm={\"purposes\":{\"ProgramTcpaTpo\":\"Auto\",\"EnterpriseHipaaAuthorization\":\"Auto\",\"EnterpriseMarketing\":\"Auto\",\"EnterpriseMarketResearch\":\"Auto\",\"EnterpriseMedicalResearch\":\"Auto\",\"EmailCommunicationPreference\":\"Auto\",\"ProgramTcpaMarketing\":\"Auto\",\"Functional\":true,\"Analytics\":true,\"Advertising\":false,\"SaleOfInfo\":\"Auto\"},\"timestamp\":\"2026-08-11T10:07:27.761Z\",\"confirmed\":true,\"prompted\":true,\"updated\":true}",
       "cookies": [
         {
-          "name": "esctx-tuLd5hjooUs",
+          "name": "esctx-FaUuyNoNHs0",
           "domain": ".login.microsoftonline.com",
-          "value": "AQABCQEAAAAdDD7nC9b5Q7JPd_okEQRFRXZvU3RzQXJ0aWZhY3RzDQAAAAAA8JvfxmrbjJMVwriRLQhmoasG_1Vupg1l_aCkGJk4NRkqMmaURlc3kICObGRhnIwvqgetiXSd15XqxC3v3XJ1BLAxDcCo-8cdEXB2ISmyWrGdN_zrpJrHim3NZZNMmJOyQGShzy6X6hFPce1bj0oowCAA"
+          "value": "AQABCQEAAAAdDD7nC9b5Q7JPd_okEQRFRXZvU3RzQXJ0aWZhY3RzDQAAAAAAQhhkbT2J8BfyH2aTnu_RUUxO1YIYHR6UeRXxFtOZYcYx3dvGH7s_k4BTiGot71G2RzTQV28N3O5sxfzLGVuJCB-dKxokp1LEErNnmE00dFzTMMMTqfrFo0gfFQ545WKz4x8dtY8P7wRFsyICRBC_QiAA"
         },
         {
           "name": "x-ms-gateway-slice",
@@ -466,12 +417,22 @@
         {
           "name": "esctx",
           "domain": ".login.microsoftonline.com",
-          "value": "PBgABBwEAAAAdDD7nC9b5Q7JPd_okEQRFRXZvU3RzQXJ0aWZhY3RzDQAAAAAAEvGMikUr2RiWJx2XpWHuU4jxti4H0BzFxDkhqwgPp9cNhWNSSe0xPsLGWpDwB22NAH-FyKRDMCLITEaHYiDWUFHDSt3IB6OYrcUhAyXvRQC4tlvSWM-vC1uB-_m8CxwF-S7KKPOnSzXpI_TKchoeEORoh8hMNuaxDtSzq9-XTDgCvyfMvZVWsNOjiQP-5T4bKQ3SWWnh2yDTkwakEfnDu267D_UKnYd8mrE4mtOKsS8SnSf21xNFawxSuCPuD2vxFgeINopNOPtaH7jOTNFyR5PztdvrJDiqB5vAzjgmssmqlliHlQsjLyvEQdhj0H8_SjIsby5q9nwe0t2NdIfremRAvbrPc5XwrUutywJm3bKKHAwfrv-OJC0bYNaGTxq63B0-Vf5I4shFtQ93_CqfhCZF-hmZAjnw26TofXrduXaQkkw0_GfbcwD4S_-R3bH2bxWQOZq03BJwnCcofTiyIvLcde_rawAKy_iQq3l0FuJhANg3OG4IK8Yy6RmoA7hb98yVEsRakROh0lXuBzCO7EFtn7auygUognHU1Vea008LgACfqZbhXrXr3NRbc2sB3cIk-sa_Y0np7FP3pwJL3dJDc6rzy1jzHkFdwXfKKraKy0PDd_5NJWrw0Ng-dBGBLzNYBBjwYZKKXwmWO3Yvc6vAb_hHlMSvU06PcbmKEXIeiani66vJLcLJhC6HQfPF4_SQoJmwtFbht3Z4ZNgtK1N-qYZWo_T3ftUuLZV96VYgAA"
+          "value": "PBgABBwEAAAAdDD7nC9b5Q7JPd_okEQRFRXZvU3RzQXJ0aWZhY3RzDQAAAAAA77waBNh6wfeIJ93FMzrAkKm9DUi2fv2FRqBjemVEwyWQ8-H7NDmWKfKWJ5axPiJ79kZ342EbgmOl0WvwAgE3IgwC29R_3zYbv_csRoBRcpFQYjV3C507178CItfv1PmukmnW5tbNln7Q_ldBb_cFtCt8lBtYomgK21E5Q1anect56OooZSLej50jbfx4rd3TzQdYwH2y9AjU0VUY_eVaRde7dMCbLQQ3fEjjtaMt4areGh6vD2-J1snx1K0jJ0lA6yWGmQ7Qfp4FeolFEYgwKQzvrmmw1yW8s7e2c5JSizGfJ9Zq6QW1u4AiwInxRJinxg1rWDaUAMbfs2-Aget8rd9NPlmJHsLVA9HA7R4uQ-B0e-WjQxGFJogSBLozwlZGkm57bNLUwIG3sBtZmsw8jE5ZV_r0vCB6Np9quICWkg881hIy7bO1NP0Vjn-rBNPrRIu0g3zjzEZkeKB6rGKmGWDeubRuoMn06h-AbrqNv5CAK1c9gmX5l8KkTncRSrfSQBBa-CJ0Uhk8jOwlKZVXrI1eKyJCsvZUJ55sK8y8gqciqrKDYCamiWcWlk2TTycFayCvKpw0PlXAp-Jwe0bPMDLM1ZZt_0fpuzNw_1K66zYJxoWhm4ihVCcXilFtGHxa-iHWreyLTkvDwF4MAIE2vyZ3HFM0SXVoFJtc7AZMlUfT1mqhgNM49xaJ2KQnvpVh7esiK6TzkHwtFsslirXfgwKnRcRMHAx7FqR83GjXiR0gAA"
         },
         {
-          "name": "esctx-3tizzAxq6M8",
+          "name": "esctx-1Y9lLLeXx2I",
           "domain": ".login.microsoftonline.com",
-          "value": "AQABCQEAAAAdDD7nC9b5Q7JPd_okEQRFRXZvU3RzQXJ0aWZhY3RzDQAAAAAAN6kryzScge5vsnTOf-MyqdhZ0FozsikPwVpHEyNh8NgFLWa6YUL5GaFFUUEaWE3jyM6kx3nvzj9pMXOfE1kbWqSRG0dYUrLRvV-k-0pnWmxqZv7YuZOSTvIsVXJ6S9W6PfwCSg36GbT9CJwuEJ7H9yAA"
+          "value": "AQABCQEAAAAdDD7nC9b5Q7JPd_okEQRFRXZvU3RzQXJ0aWZhY3RzDQAAAAAAXsoqD1n68C_ItDb_Q_QMsAPV9-CXpDjh2odsQeEEeAf2UWvlMYSYI89k-GkdwuTF9ICZ8d5hxcHCqydZtwLp79dpCCShSRLPEnJaLnn7R3-ZlsQbDAdHtrGriy8qYFUryJnm_5MK3N9ve9lCVD7XIiAA"
+        },
+        {
+          "name": "uaid",
+          "domain": ".login.live.com",
+          "value": "6ca8c719d12a4ec7b454c792c97aa68d"
+        },
+        {
+          "name": "MSPRequ",
+          "domain": ".login.live.com",
+          "value": "id=N&lt=1786442792&co=1"
         },
         {
           "name": "brcap",
@@ -479,19 +440,9 @@
           "value": "0"
         },
         {
-          "name": "uaid",
-          "domain": ".login.live.com",
-          "value": "840eb09696024cecbd443d131ed5a5a6"
-        },
-        {
-          "name": "MSPRequ",
-          "domain": ".login.live.com",
-          "value": "id=N&lt=1786364770&co=1"
-        },
-        {
           "name": "fpc",
           "domain": "autologon.microsoftazuread-sso.com",
-          "value": "As1dIurF8flAvr0nWRFO37M"
+          "value": "ApzzvwZMm0VDuEtDPJkfoTk"
         },
         {
           "name": "x-ms-gateway-slice",
@@ -506,67 +457,67 @@
         {
           "name": "wlidperf",
           "domain": ".microsoftonline.com",
-          "value": "FR=L&ST=1786364793279"
+          "value": "FR=L&ST=1786442816206"
         },
         {
           "name": "ESTSAUTHPERSISTENT",
           "domain": ".login.microsoftonline.com",
-          "value": "1.ARgAgZqlGKjuMEyUitiCTNwlgLkMGNGd9RVNu_CqSqIHJWIAAAAYAA.BQABFwQAAAADAOz_BQD0_0V2b1N0c0FydGlmYWN0cxAAAAAAAB_y31GyPqtlAd3-DeBj7aYXZ3PW6CIbfgPcKI_5HuEnmP6F7Uw6TQbWWWdrGukxc2KDkSPRaYa6hUyJHOqfjUefOoRLras4D6tkORQ7OjFmQvO6PnA76dMPECTZ71uFgnCNtKAtN4U83WMVVmyMb4D-MbEoDTL7MuHqxSH_8CTk2NK5NMkmCv7AlitDpIucxODHjvu-MZPtKMpFpgo9iLV3RFhbcg6dOMs6vOGdwpXcTIDzqOMs-5lljTgdJeszh_GrB9aVYwjN-PkStvDeAdDD9OA83tjH7g0EgIzE963t3d56qYup-YzeKES-7Gmk3JEb8xDLUpk0RfHh7-L1dHGJf9MAbak1lohAZ21dhHFPujkmEY0Ggp1dAHvDI9Dr4woIm9_Cqb_-P2zxEAhR33oQFDSjfGEgSL38x2iuqPkSOL8zFNNpyuDb38e6wv1DSi_iNeD_P5hQYrA1RzKcNkzpEkJRlMPnRFF3ERCvZfTI_6AReFjC5JOPiVGLubYMNrsh_vybB6FRNYa29KAqlRQ4wm0gfZAn3FWPtnpybxHle-2WN5LstbpdAbptfjUw624FQw_WIM4RpkPy6GXQTJ7BDRkAGFZz1CA8-JQZU7rwa2FtXkDY_I4GhROQpgSPLqb6rJxklIW2M0iAvkTgKRliAQlDRKkc8pqjfnw5zQgKhzpowtTrfKP2XppO88cu59bkXP4wUqIXnjzE85Qr3GtXk2SNOX1StEx_DnkQ-2EbgVB4VcxhUaeU23KiFHTCaYsouIKr2AbO_duFKwCu7xB2ROGk3a2Ut2p1z3hba7UErwJ5mgOPdggZi2TGeI5pBfEmJyTOVwMGETtgo2yHVCq-hwnTF9pPDHhv24scIilaF-hNGUTt6OlIBmO-lqVW4-PDuIpUs9hb9xXYki-itj9JQ4tW1HKj-X-P4SdCBZob6MkPYE3AeBmz_gE6Hb11bOzacHLF7TnLqrV85Ou3rxuC3IpObxg4CeqJtZzKg8qkxQ6g_GjtyXZoFXHjDiQWdWpkIbH0xho"
+          "value": "1.ARgAgZqlGKjuMEyUitiCTNwlgLkMGNGd9RVNu_CqSqIHJWIAAAAYAA.BQABFwQAAAADAOz_BQD0_0V2b1N0c0FydGlmYWN0cxAAAAAAAGDRsdYY8URoyGguFx_HcyHRgF87ZqEhm3uQMWgrdVgRhlsfYtAkYRgUn1qSNzET9Z-1u_JXsfIudFUKOO8c0qd2zIpbd7yC3JzeaLupPt0VDyZ4vueYdhMxrE0aRvc4Xm00Ky3qUeIBS8nIr91tP6ZvbdTsawRB-298uP_tglf7tpnyXUhUsDSvT19CJW60-cBCsdvFDpBfB1ceCoey-aPuGdc6mSYIRu643hAKer8moNFRz9Kn-gGBXjjyQEma5kCBR9RuB6AdxW5uS9PxZh4-YDAsXBzfZNA0Q1NFIXRBB7ELM1Rv75-5Rlxn-wmGhzcTzhVWkKqSQWcxyw5wGMDJcyWZZvTPATlEmqRv29aPnLC5E4Yuah-QeV6Us658cSilcx5HF8ta83w6-iUmJl_YzjQT1rHMaRQAybEzSelehfskHEi2qmmsU1ZpbpyTsgDkKp-jYIiSxHldl2eX8wkqy6Ifw-Bi8WFtup9tHcs5QEWHuzDZR7_claiuVtJR6DTNU6JXWS0x6yJIbzWOc8Zsb5lJreYvZXAHwSp1JadDG_yGRUk1ALfGMseIw6qr0KOAmY53-3c9NApytgn4NuUY_sLvq1wmTCwEm9pHtHviXyripeNifPP59X03BQg60bpy8iUIX7rDbRacHWtGQZq_7ziUQFj_UEKbXy1rVIWQTrOm2oFYdh3HCQP_HCIoR9_zwGe1GwFGwZXLqnpp9_X3VLLTZBOoG4cLWoAQSIe6Rs3Q-svYRIeSMgtoMIFTWRNOsDQgw-aH0gibmR--ArwseHz-Rfw85CDydGEyhDQoYd5lbmAXlpMpLbpMaYo4HtBSgNF-8UcWZnxmMlGpASDfv9K0DPtLF1hD8wR6flBsnThiS1G-_GsRaxFtUjvTWdPMXECJ-BfbHcstzvOsw37RVtbUoOVcGoX1oI9DsIDuasel9KsTSoarArV9HnbEhbA_NjBqA--5iNz6F6TeYUiBuRv2LVxz0qh4yHq6NbNrNiyyJ4sRyCvHs8PDxFnprAWxjxL_W7w"
         },
         {
           "name": "ESTSAUTH",
           "domain": ".login.microsoftonline.com",
-          "value": "1.ARgAgZqlGKjuMEyUitiCTNwlgLkMGNGd9RVNu_CqSqIHJWIAAAAYAA.BQABFwQAAAADAOz_BQD0_0V2b1N0c0FydGlmYWN0cw8AAAAAAOFp3kzp73AZLCwCFVpRIn6jR4bRP0g80xd1K8SbkEbFhygXI3SCP7YCEIFM7qP5sjHdHpTni8RjGYsGFk5qILdQJVyWQ3rSUEWgOc_jT5EKIxyGApg3pY5pk2qmZhuCOKhikiv_uzBI8Ki6iv1QnhIbPqbu2KX-JIlnCUazUYFudWNr05_8Pl7ZVahK1ncvvHEfPk_ViceWOjoBn6FGk7f7XCJjr9ms0Pz33VDYkVQgkUD65NUVy6aoXYiiCwLlMMtCMfjNKioYg43-txC9wQc3K7xinQOYL3UNn_G_lhejaExr5vYsoThe8vl85tSKkEPn9j-JmY9VCa-hY8kCyAPQrgXT_EcRaA2vbrket0pOXA7Nub1EujlRSlzoBjJf7xtyw6eQ93yXdTNfrKk0z9sxVMNbNKxdi6gjvXy29E2QQs0D4F4-WI8NkiGIRfLqDE1MHqhzU4TsMm1hiivwk5_G0mU6OMVXyltxvGWVAmm0sb3zA1QVF8eChYOkbGKSSz1BFuhqFcLtw8CSD4NsiaRxfKoyYZtT28HEqpKqVMrZqXCROWdHYiZuBSba19aIUAc_01ifrS66lIjZw4D5_Pe_CgIHKgzQ3Ug8Dpb-I9_EtHC84EUldFLanaWF8inkEIA-jw3FnzknEE1auu0PaUt_E1EHD6JGiAI6ib_PyuQJdTp8wr6xkilh6QedQXS1LJ_Tz48QdPfJETDQT4oFd4EIyyio6xHeCVRLzi08W0TP_BoG7L32AU9RagRKLjub-45xSe1WKMhXcllk-6VRsTFnraU9Lss5VtoBQc5J1Heq2DlRY6xcjUF-JFu3CxPC8pNvwJDrte5tIrj57b_qXPCPcwz2z5CIHkkm538u0JlEFRFXeTyIFe6MyW0z3SXyZj81FD-3qczR1tatUeHFrrBhEOH913KzF_HBedL1ePNbItWyjqD8i_q3nwb0OdS7Xq_gw0F2o5J_phsFU5yzQlThlD60nBOb2MK5dhw9vrTFOJ9g7RRd3_Ao7ZDh2bZTkfrvObhPzDu9dxC_Hs0ll_xPefw_CmzF39kcRl2oN9D8lu-Xs6hvWvrXvFZ9qjMXAuloIph6ZvV2KxIrDUVOJTTmpap3RfliFsNY1a6JVSrEtmc9tqHxmxCH7VnpiOwOd0oq1_plag71zZ2DmOgJDCrGJjMLOlSCOfIhpk9KGHjvYwQ32zMwHlPMQ90Pskq3Qoo99M5vU173qv3Nk_iKr91KAOk6c5AhwbNS"
+          "value": "1.ARgAgZqlGKjuMEyUitiCTNwlgLkMGNGd9RVNu_CqSqIHJWIAAAAYAA.BQABFwQAAAADAOz_BQD0_0V2b1N0c0FydGlmYWN0cw8AAAAAAO717tOe6xPJPQrQcjbmuZ8f2yPhUpc2mBnpQFRZtoB5VVTeAhaEXLHTCjYE4H4zoXA4vebZ1KLQp7lIl0aNaiUQ7ItogG9Zt55wZwBiEUoi52ptEMBJ-rZV6LX892A6RXklDiI1uvggUDpz_EheiXeRj459Js7jtj2lOvd57AXk8di0A0fveywHO2WZeSOO1yB3Ff7CFqXu8MB3YekXAJCeChfqRSOpdrOV5lcflOp4ZsoqEPFr_kGjrjtsQmWrrb5fJD2wzSkJKg33gWlhziKlh8liUVKz__dPsLZnz1oCxpFfJySdS-dO9Z4dXbtsCNNTVM3IC_bbdHNGp-bpHj5IWLdoYpciGsqcjK4rUwGnF5301gzF-E1pRIHgPiSJRMuU5SwwuSoYdemFvVWH6TByP--vH3kMnEf5cwaf4foiTKgTefdl2OtARR6kIm0T6i_1pqevWYsgDorVE4siFnrfH6Ay6O-dgb2I2BvGC6Rt6sI6fm7W1VfEM0A4oX21aUEecBComC0qhoDPjx0HnQA9e0XJ7OBfay7BwO08JxSjDlspOIgXVTN3Kpr6yRh9vEMWHx_GtNRBM-sRckXisxF_4_ogEEIBxAToCXPFTbG7KMmd_EgsRwqLfetDbXu-ClBt_4oK9ZTdECymQuOsz79YuSAz7XlCVMh_w5f17CtRHh48hElpJw3Q-2DowSsPlqDO7GXug9obHb8IvYXoN6-WcXlRbno050A31-x9_ZSDFI7zZ-OCDZlSf6P4lP015DDUSHCTUeNFmVCWxvxBOc5lyNFowBgy-Qd1zBhQTmXMPuZhXnXYdM2WMvGucFhPGYFWTnOdFX3fghJ9xWkAeRKXIxfauV5B5gvADwhHz_vhan40pTeTMBefZ0IVe5M4U6Q5QgRoLDre6qnNThtyqNfvV0606RXeMoj3SUfufFG96HRKV9BEtVbuH2WXxHeLAUm-y1c1mIaKugh1ff3wgs2mO-gBFKpUf_cSlynr3HEWNg5VEr0zLrXkN5bBYG7MedVuVaBP5m-ki_kIM3RIZXJ7MMwzxqf92CEjIjqCAKmLGwLUYXeugAnTNgR1WbMMPpCMOjTR7wCkw9D3Tqo_xEiaPuwIQoojLYn_wGHrXtVqgRS3OvmEy09ihhZCPWQdwYsL4to18I31bbn8PJj8tk7A1YRKSaWNBRXR6jSoRZQgQ4bmHJWRb99eY2c2btnzgSeuVoS-HgfEcBi_zGD-hJtIS7_gQA9V5A"
         },
         {
           "name": "ESTSAUTHLIGHT",
           "domain": "login.microsoftonline.com",
-          "value": "+007ba08a-d6d6-060b-d716-5c5fcb36ffd5"
+          "value": "+007bc79a-194d-608f-8b47-27213b0ade07"
         },
         {
           "name": "buid",
           "domain": "login.microsoftonline.com",
-          "value": "1.ARgAgZqlGKjuMEyUitiCTNwlgLkMGNGd9RVNu_CqSqIHJWIAAAAYAA.AQABGgEAAAAdDD7nC9b5Q7JPd_okEQRFRXZvU3RzQXJ0aWZhY3RzAwAAAAAA4sk35H770vJunKG_nt0dx3nD7WWo5pV8rnb8Y_Ijo0BYXMFM08QmDEevchNSp-lrcLajfayGEyScihznHO4JMyPtlLvFYIvb8ax5tdCGrfnLTQDCFJLdJb7QnNeb-dA0nbZZsXsMzohXK6DRXVi1vn14MnfIF1u1tCsNAsnJjY8gAA"
+          "value": "1.ARgAgZqlGKjuMEyUitiCTNwlgLkMGNGd9RVNu_CqSqIHJWIAAAAYAA.AQABGgEAAAAdDD7nC9b5Q7JPd_okEQRFRXZvU3RzQXJ0aWZhY3RzAwAAAAAA_6xqT5vk9pjtj8GfH9knhel8XX4aBvR6EBg1RljHDcquDpIW9Zd2yb-TiVbdm5C3vSBFLnIW3MGIJllNIUmCUbAo9gPTg9f7KdaHv-l2tvb0J4Gt9_9gwTVNYO6BT0BTUt5BOfte07EnZTyVEEChENbRWLhMLuJW7P53GAWBZUsgAA"
         },
         {
           "name": "CCState",
           "domain": ".login.microsoftonline.com",
-          "value": "RWhJS0VQdlNySmNadVZGS2p0d05FNnhyVTR3PQ=="
+          "value": "RWhJS0VCZEJSWTE0QVJSS2gyOTVHc3QvdkNzPQ=="
         },
         {
           "name": "SignInStateCookie",
           "domain": ".login.microsoftonline.com",
-          "value": "CBQABFgIAAAADAOz_BQD0_0V2b1N0c0FydGlmYWN0cwYAAAAAACc-vQfBIyuLuoJXek_MySLnBS_GYqt6tiVlxj_Qp1FtjPe0_O2ybyam-xb4mpkMF2FNHRS8bvCohxBlUnQVdJ7vzKxmBsDyUZLyRqPDFYbVjxV2JVlE6An2hiRbILMbt1xptyk6DuE45F2GnRIyw5ZG7o5xelGXT99RfzZI_GW0rpqJDi9RUKljDUWgngbsHH0Hov5lIh4MuoCQZU_YsUd1CVdCV8S-d0KbD6e_ziV0wIRILZSS_q55HbPr4l0PWnz4OVQH4SmonVyq9ROTxpeWYXmKqDS8mP_u4EFrQJDP2aiFxQAXSnDTpVdV3c1f4pVA7SihHMyUd_J36v81bfIi8xN3GOFS5tFZyhTeu6bOkV6eIadjFO1SpG-m4ExL4WPjdKGfA7XKfGX1RAYYg1PGAq0D5NA8tNnRVJY6uWXcCiRHR-SC_utFa1pZ68AFmHzx5cYhLd6uz2TZSQQXgfjSr3Iw7142qDOaA_R1y2Hgdw-EF-oIxmYwlx55sz29Xy_1E24LLIi8F9gXJ_gQcHi5KAsfmG5u16r_dDe6Hw1xW0oO6xRTSXDUrGEpLujyijQ_KW4aETavSQ68UlUhVjEOkx1CnCi1T7aLeWH5pweMBhkt97f3DabN41ltVIEL5XpvzJ9aSMV87smsMe22ALPYaBeDKzDzGCKpeoH3yAadSjCb_jpT00s8J1JgkFMlKpNz6pL4EdhJAQRfGKD8FK2xaQKd8jIqQzcT3Iu5KpXnswHvG4KclaOP_UkmdqwewYjD-_HDxqWR7_g1paRTZzpU3UC4fTuK2emMa0o"
+          "value": "CBQABFgIAAAADAOz_BQD0_0V2b1N0c0FydGlmYWN0cwYAAAAAAKsN7D6R-tr6lopDDv31aPb5EYNfqoV9dzClcURIf5Cm6_QSvSZ5aZGTuMnMvLGutA7tBdKi0HetYxJO0CyVy9rxfURSD2nRvL2AUzcg9lwwiCfe-8cDrMQiGzZL82Jee9wPfhHVBEg-yFAnpNu7VP79PoOKJzVBO22gIOfqeKGIxgnNb6l3LVY6mtzXZXz5UN_U9aK-EQxBQahuO-JlNpoBb0sWQqfzut16JyRIFTVJOPA-Jc7rmJHE5P49jz9UTu5_Q03KrPIiVS7fwkHwC51c6rnE9DSXXHJSoKBHh-En7sRSyP_mpBkP-DQqdIjS-Yk3YPQAbJiTabM8OIA7vhlRgl9BxVEJSkzPc_8HyLo_YN4_ZP5OP9mtPyxFqIe0_D_CD3KB0jee82dSaAoPg5kwzoX8wkbaGHKX_3L-5wlszhwxNhADXmZi858zlD-SvTSrwUCu1iOhGC5hjllHEstd6-_UYrnqtq0GDX0YTJig2jLDtECkRCVJVIvVn2XbritD3gVfZkiR9zRo_8D1oU6wfrdaTb4ivDUz42ls7RBfmciyPqji7qPHrXWC_f9hJxV7e_rt_7kPQ0qWP8bZw924ctBQ-_ip_ldhD6VrvjABwHG-1FLwaY7DHxzfjpWkW0SqpSfrHr_N21AKKNAVCT5yl1Q-Y_D759ep-Ksntccf_BeobHuRAQmPYUIXRgZ1zBA-nSY6Bh-yNDuuZDVzb19GRT2-rMcTP2CJ2_Y_d3DXpGUFDF4N_Ss0TFFF8CEUTWyjJQ5xiVxnkMWT5ss41ZibFFXcGWyp6Ym1"
         },
         {
           "name": "fpc",
           "domain": "login.microsoftonline.com",
-          "value": "AktfF11aP0VCnFOm6OMOtvlMG9IRAQAAAGG6C-IOAAAAZSs2ggEAAAB4ugviDgAAAA"
+          "value": "AvGLzeNxtPFGiRwNoAHn3n9MG9IRAQAAACXrDOIOAAAAZSs2ggEAAAA_6wziDgAAAA"
         },
         {
           "name": "_oauth2_proxy",
           "domain": "pharmacy-patient-portal.dev.apps.lilly.com",
-          "value": "djIuWDI5aGRYUm9NbDl3Y205NGVTMDNNREkwWVRCbFpqSXpZVGMwWmpsaVpEZGhORE5oTlRneVpXVTBNMkV5T0EuRHJoSW1WNU9tM3JkOF8xRXNGVk9pQQ==|1786364794|q0QMQAN5HR3a_qtuh_jUNp3gqa1xf31mOzVOLP5gR30="
-        },
-        {
-          "name": "__cf_bm",
-          "domain": ".dev.fdl.lilly.com",
-          "value": "cj18Qb1xTSG98MTO4AcTa3Ff3hqsrcNEK0N72DStvrI-1786364795.7460868-1.0.1.1-v7mMeyIKhIq023QYJPclEgM8EkbnPW0BcfCcl4UjP0vcsbOf1jLeJLA_kIFe0H1kBVZPAnUb7iLAimdy2_yjpNz0P4wrL_j.qvAH6HXl9_cLOUJL2APOpqCsRZyL8UhC"
+          "value": "djIuWDI5aGRYUm9NbDl3Y205NGVTMDBOMlptTXpjMk16RXlaR0poWldNd01HTXdPRFV3T1RFMVpqSTFNelV5T0EubGxtcUQ1b2xfV1pKRWZESWR1RWdZQQ==|1786442817|zk4pWriCd6rORPkZk-THDqb19MY9Cl2YnqnxiIo3az4="
         },
         {
           "name": "gtm.start",
           "domain": "pharmacy-patient-portal.dev.apps.lilly.com",
-          "value": "1786364796489"
+          "value": "1786442819182"
         },
         {
           "name": "__cf_bm",
           "domain": ".dev.unex.lilly.com",
-          "value": "OGZTIpjMuZ0wqcjJhvaaZdUHcdiU8q_FvvrXIp9hTwE-1786364796.6866367-1.0.1.1-_HyMeZ0bJZE7RQ6T.bf0w5cv8CLPa5CBtj6dewT2Feoxnsf0nkQhW1eZnXOOebvLhFb5.NyiOlrt0zkMbd.8RWpIPKtwsm0.BOXbVX.IauWtOWDEb424ZbEM9Oq2df7i"
+          "value": "4dyG34l1D5IPWeh0doPVOt9UsdVVxDtQHCa4rK8hzvI-1786442819.1941655-1.0.1.1-LTmeQvvT.2A2oAeR2IbLiE50KZqPoxwhvn2Snjm_.3D_zrEGpG5nETby3tiniv7mLDXx9WR73ob.ogW7ams8kvSN7WkY66rKm0CgCglWkvIu2XQMXfLo8YdR1nkpwxqS"
         },
         {
           "name": "__cf_bm",
           "domain": ".dev.apps.lilly.com",
-          "value": "_hyHaKXVi0l4qJGN9Sk0Xlzmdp0sjyItofXEFWuIJVw-1786364873.3453486-1.0.1.1-0XcRUygMiQI2Fm1cknEWyK4y9HJrgj8bZflWXdXz90HG_if3JMz83s9jyFtuKRZpmmIrDwTRwIsrZ7YsGQ0SH2dOpYuZTpJKWcYk8eVDXbnmSSu5NG.Mpc6QmcATBJwy"
+          "value": "oIn0.Gfnpd2Y69_O0NLWc1QDNqJf4NjbqUkR1VeODcI-1786442841.1033576-1.0.1.1-wFDZgg9dMEjfSiaZrxiiAiqfOHvLgDbV9AuV39Pdul7Ai2AKqH6LonvyKp8kMVhWyppL9j57J6icec5Y2UlCoNjw2xjltLJVJk6JmOlt_SP_0XY3Su7C6N9zqFHWTM3u"
+        },
+        {
+          "name": "__cf_bm",
+          "domain": ".dev.fdl.lilly.com",
+          "value": "0CgwmQINiGL0gTfWtRgyY.FgChVzZNUanEbHovY4N5E-1786442841.3329895-1.0.1.1-PnM2eR6a9zgJWhQSrDz6YHYkh3WteWVGVo_79e0Kca5qEnWb7H.JAikoo73SvY83iM_K1GYLqJsTw7WiL0TrmMdlUHS87W7OTCNjAUr88mRYnK7OdB4JbHqpMB3ZmxfH"
         },
         {
           "name": "PageNumber",
@@ -576,65 +527,65 @@
         {
           "name": "JSESSIONID",
           "domain": ".nr-data.net",
-          "value": "178fd342ab06e46c"
+          "value": "5936a2ab49e43d46"
         },
         {
           "name": "tcm",
           "domain": ".lilly.com",
-          "value": "{\"purposes\":{\"ProgramTcpaTpo\":\"Auto\",\"EnterpriseHipaaAuthorization\":\"Auto\",\"EnterpriseMarketing\":\"Auto\",\"EnterpriseMarketResearch\":\"Auto\",\"EnterpriseMedicalResearch\":\"Auto\",\"EmailCommunicationPreference\":\"Auto\",\"ProgramTcpaMarketing\":\"Auto\",\"Functional\":true,\"Analytics\":true,\"Advertising\":false,\"SaleOfInfo\":\"Auto\"},\"timestamp\":\"2026-08-10T12:28:02.591Z\",\"confirmed\":true,\"prompted\":true,\"updated\":true}"
+          "value": "{\"purposes\":{\"ProgramTcpaTpo\":\"Auto\",\"EnterpriseHipaaAuthorization\":\"Auto\",\"EnterpriseMarketing\":\"Auto\",\"EnterpriseMarketResearch\":\"Auto\",\"EnterpriseMedicalResearch\":\"Auto\",\"EmailCommunicationPreference\":\"Auto\",\"ProgramTcpaMarketing\":\"Auto\",\"Functional\":true,\"Analytics\":true,\"Advertising\":false,\"SaleOfInfo\":\"Auto\"},\"timestamp\":\"2026-08-11T10:07:27.761Z\",\"confirmed\":true,\"prompted\":true,\"updated\":true}"
         }
       ]
     }
   },
   "network": [
     {
-      "ts": 1786364873487,
+      "ts": 1786442841244,
       "kind": "request",
       "method": "GET",
       "url": "https://transcend-cdn.com/cm-test/074a9383-7195-473e-88d5-50f1e7e7eb16/airgap.js",
       "postData": null
     },
     {
-      "ts": 1786364873642,
+      "ts": 1786442841382,
       "kind": "response",
       "status": 200,
       "url": "https://transcend-cdn.com/cm-test/074a9383-7195-473e-88d5-50f1e7e7eb16/airgap.js"
     },
     {
-      "ts": 1786364873690,
+      "ts": 1786442841417,
       "kind": "request",
       "method": "GET",
       "url": "https://transcend-cdn.com/cm-test/074a9383-7195-473e-88d5-50f1e7e7eb16/ui.js",
       "postData": null
     },
     {
-      "ts": 1786364873837,
+      "ts": 1786442841517,
       "kind": "response",
       "status": 200,
       "url": "https://transcend-cdn.com/cm-test/074a9383-7195-473e-88d5-50f1e7e7eb16/ui.js"
     },
     {
-      "ts": 1786364873879,
+      "ts": 1786442841572,
       "kind": "request",
       "method": "GET",
       "url": "https://transcend-cdn.com/cm-test/074a9383-7195-473e-88d5-50f1e7e7eb16/cm.css",
       "postData": null
     },
     {
-      "ts": 1786364873879,
+      "ts": 1786442841573,
       "kind": "request",
       "method": "GET",
       "url": "https://transcend-cdn.com/cm-test/074a9383-7195-473e-88d5-50f1e7e7eb16/translations/en.json",
       "postData": null
     },
     {
-      "ts": 1786364873912,
+      "ts": 1786442841589,
       "kind": "response",
       "status": 200,
       "url": "https://transcend-cdn.com/cm-test/074a9383-7195-473e-88d5-50f1e7e7eb16/cm.css"
     },
     {
-      "ts": 1786364873920,
+      "ts": 1786442841623,
       "kind": "response",
       "status": 200,
       "url": "https://transcend-cdn.com/cm-test/074a9383-7195-473e-88d5-50f1e7e7eb16/translations/en.json"
@@ -663,7 +614,7 @@
       "reason": null,
       "mismatch": null,
       "flags": null,
-      "timestamp": "2026-08-10T12:28:02.591Z",
+      "timestamp": "2026-08-11T10:07:27.761Z",
       "payload": {
         "purposes": {
           "ProgramTcpaTpo": "Auto",
@@ -678,7 +629,7 @@
           "Advertising": false,
           "SaleOfInfo": "Auto"
         },
-        "timestamp": "2026-08-10T12:28:02.591Z",
+        "timestamp": "2026-08-11T10:07:27.761Z",
         "confirmed": true,
         "prompted": true,
         "updated": true
@@ -720,7 +671,7 @@
         "reason": null,
         "mismatch": null,
         "flags": null,
-        "timestamp": "2026-08-10T12:28:02.591Z",
+        "timestamp": "2026-08-11T10:07:27.761Z",
         "payload": {
           "purposes": {
             "ProgramTcpaTpo": "Auto",
@@ -735,7 +686,7 @@
             "Advertising": false,
             "SaleOfInfo": "Auto"
           },
-          "timestamp": "2026-08-10T12:28:02.591Z",
+          "timestamp": "2026-08-11T10:07:27.761Z",
           "confirmed": true,
           "prompted": true,
           "updated": true
@@ -749,7 +700,7 @@
         "reason": null,
         "mismatch": null,
         "flags": null,
-        "timestamp": "2026-08-10T12:28:02.591Z",
+        "timestamp": "2026-08-11T10:07:27.761Z",
         "payload": {
           "purposes": {
             "ProgramTcpaTpo": "Auto",
@@ -764,7 +715,7 @@
             "Advertising": false,
             "SaleOfInfo": "Auto"
           },
-          "timestamp": "2026-08-10T12:28:02.591Z",
+          "timestamp": "2026-08-11T10:07:27.761Z",
           "confirmed": true,
           "prompted": true,
           "updated": true
@@ -778,7 +729,7 @@
         "reason": null,
         "mismatch": null,
         "flags": null,
-        "timestamp": "2026-08-10T12:28:02.591Z",
+        "timestamp": "2026-08-11T10:07:27.761Z",
         "payload": {
           "purposes": {
             "ProgramTcpaTpo": "Auto",
@@ -793,7 +744,7 @@
             "Advertising": false,
             "SaleOfInfo": "Auto"
           },
-          "timestamp": "2026-08-10T12:28:02.591Z",
+          "timestamp": "2026-08-11T10:07:27.761Z",
           "confirmed": true,
           "prompted": true,
           "updated": true
@@ -807,7 +758,7 @@
         "reason": null,
         "mismatch": null,
         "flags": null,
-        "timestamp": "2026-08-10T12:28:02.591Z",
+        "timestamp": "2026-08-11T10:07:27.761Z",
         "payload": {
           "purposes": {
             "ProgramTcpaTpo": "Auto",
@@ -822,7 +773,7 @@
             "Advertising": false,
             "SaleOfInfo": "Auto"
           },
-          "timestamp": "2026-08-10T12:28:02.591Z",
+          "timestamp": "2026-08-11T10:07:27.761Z",
           "confirmed": true,
           "prompted": true,
           "updated": true
@@ -836,7 +787,7 @@
         "reason": null,
         "mismatch": null,
         "flags": null,
-        "timestamp": "2026-08-10T12:28:02.591Z",
+        "timestamp": "2026-08-11T10:07:27.761Z",
         "payload": {
           "purposes": {
             "ProgramTcpaTpo": "Auto",
@@ -851,7 +802,7 @@
             "Advertising": false,
             "SaleOfInfo": "Auto"
           },
-          "timestamp": "2026-08-10T12:28:02.591Z",
+          "timestamp": "2026-08-11T10:07:27.761Z",
           "confirmed": true,
           "prompted": true,
           "updated": true
@@ -865,7 +816,7 @@
         "reason": null,
         "mismatch": null,
         "flags": null,
-        "timestamp": "2026-08-10T12:28:02.591Z",
+        "timestamp": "2026-08-11T10:07:27.761Z",
         "payload": {
           "purposes": {
             "ProgramTcpaTpo": "Auto",
@@ -880,7 +831,7 @@
             "Advertising": false,
             "SaleOfInfo": "Auto"
           },
-          "timestamp": "2026-08-10T12:28:02.591Z",
+          "timestamp": "2026-08-11T10:07:27.761Z",
           "confirmed": true,
           "prompted": true,
           "updated": true

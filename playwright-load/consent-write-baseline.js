@@ -262,6 +262,16 @@ async function verifyConsentArtifacts() {
       throw new Error('Redirected to Microsoft login while verifying cookie consent. Refresh auth state first.');
     }
 
+    // Clear any existing consent so the banner appears again on reload.
+    await context.clearCookies();
+    await page.evaluate((storageKey) => {
+      localStorage.removeItem(storageKey);
+    }, CONSENT_LOCALSTORAGE_KEY);
+    await page.reload({ waitUntil: 'domcontentloaded', timeout: NAV_TIMEOUT_MS });
+    // Wait for the Transcend SDK to initialise and render the banner.
+    await page.waitForFunction(() => Boolean(window.transcend && window.transcend.ready), { timeout: 20000 }).catch(() => {});
+    await page.waitForTimeout(1500);
+
     const selector = cookieSelectorForAction(COOKIE_ACTION);
     let clickResult = { clicked: false, reason: 'not-attempted' };
 
